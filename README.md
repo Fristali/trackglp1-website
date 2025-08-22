@@ -1,13 +1,13 @@
-# TrackGLP1 Website
+# ShotClock Website
 
-This is the official website for TrackGLP1, hosted on GitHub Pages at trackglp1.com.
+This is the official website for ShotClock (GLP-1 & Peptide Tracker), hosted on GitHub Pages at trackglp1.com.
 
 ## Files
 
-- `index.html` - Landing page
+- `index.html` - Landing page for GLP-1 & peptide tracker
 - `privacy.html` - Privacy Policy
 - `terms.html` - Terms of Service  
-- `support.html` - Support & FAQ
+- `support.html` - Support & FAQ (includes peptide information)
 - `styles.css` - Stylesheet
 - `CNAME` - Custom domain configuration
 
