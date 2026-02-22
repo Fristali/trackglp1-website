@@ -1,5 +1,21 @@
 [
   {
+    "id": "upd-2026-02-22-05",
+    "date": "2026-02-22",
+    "title": "China price-list compound expansion added",
+    "summary": "Added dedicated guide coverage for compounds listed in the provided WWB China price list PDF, including peptide, oral, and injectable-catalog entries with citations and safety framing.",
+    "impactedGuides": [
+      "cagrilintide",
+      "tesofensine",
+      "orforglipron",
+      "test-cypionate",
+      "rad140",
+      "lipo-c-120mg",
+      "bpc157-5mg-plus-tb500-5mg-blend"
+    ],
+    "version": "1.1.0"
+  },
+  {
     "id": "upd-2026-02-22-01",
     "date": "2026-02-22",
     "title": "Dedicated guide architecture launched",

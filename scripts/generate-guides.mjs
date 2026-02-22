@@ -63,6 +63,15 @@ const warningBlock = (guide) => {
 };
 
 const writeGuidePages = () => {
+  const expectedFiles = new Set(guides.map((guide) => `${guide.slug}.html`));
+
+  for (const entry of fs.readdirSync(guidesDir)) {
+    if (!entry.endsWith('.html')) continue;
+    if (!expectedFiles.has(entry)) {
+      fs.unlinkSync(path.join(guidesDir, entry));
+    }
+  }
+
   for (const guide of guides) {
     const citationsHtml = guide.citations.map((citation) => {
       const citationId = escapeHtml(citation.id);
