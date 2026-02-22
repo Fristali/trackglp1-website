@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{TITLE}} Guide - ShotClock Learn</title>
+  <title>{{SEO_TITLE}}</title>
   <meta name="description" content="{{META_DESCRIPTION}}">
   <link rel="canonical" href="{{CANONICAL_URL}}">
   <link rel="stylesheet" href="../styles.css">
@@ -37,7 +37,7 @@
         <span>/</span>
         <a href="../library.html">Learn</a>
         <span>/</span>
-        <span>{{TITLE}}</span>
+        <span>{{DISPLAY_TITLE}}</span>
       </nav>
 
       <header class="guide-hero">
@@ -46,11 +46,17 @@
           <span class="status-badge status-category">{{CATEGORY}}</span>
           <span class="guide-date">Reviewed: {{LAST_REVIEWED}}</span>
         </div>
-        <h1>{{TITLE}}</h1>
+        <h1>{{DISPLAY_TITLE}}</h1>
+        <p class="guide-subtitle">{{SUBTITLE}}</p>
         <p>{{HERO_SUMMARY}}</p>
         <p class="guide-aliases">Also known as: {{ALIASES}}</p>
+        <div class="taxonomy-row">
+          {{TAXONOMY_CHIPS_HTML}}
+        </div>
       </header>
 
+      {{ACRONYM_PANEL_HTML}}
+      {{COMPOSITION_PANEL_HTML}}
       {{WARNING_BLOCK}}
 
       <div class="guide-layout">

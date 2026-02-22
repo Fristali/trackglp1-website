@@ -11,6 +11,7 @@ const templatesDir = path.join(root, 'templates');
 const guidesDir = path.join(root, 'guides');
 
 const SITE_URL = 'https://trackglp1.com';
+const BUILD_DATE = new Date().toISOString().slice(0, 10);
 
 const guides = JSON.parse(fs.readFileSync(path.join(contentDir, 'guides.json'), 'utf8'));
 const updates = JSON.parse(fs.readFileSync(path.join(contentDir, 'updates.json'), 'utf8'));
@@ -20,6 +21,8 @@ const updatesTemplate = fs.readFileSync(path.join(templatesDir, 'updates.templat
 if (!fs.existsSync(guidesDir)) {
   fs.mkdirSync(guidesDir, { recursive: true });
 }
+
+const guideBySlug = new Map(guides.map((guide) => [guide.slug, guide]));
 
 const escapeHtml = (value) => String(value)
   .replace(/&/g, '&amp;')
@@ -53,13 +56,72 @@ const warningBlock = (guide) => {
     ? 'Legacy or discontinued status: availability, safety documentation, and market oversight may differ by region and date.'
     : guide.status === 'regional-approval'
       ? 'Regional approval status: this therapy may be approved in some jurisdictions but not others.'
-      : 'Experimental status: investigational therapies may have limited long-term safety/efficacy evidence.';
+      : 'Experimental status: investigational therapies may have limited long-term safety and efficacy evidence.';
 
   return `<section class="guide-section warning-box">
         <h2>Important Status Notice</h2>
         <p>${escapeHtml(warning)}</p>
         <p>Use this page for education and tracking preparation only. Clinical decisions should be made with a licensed provider.</p>
       </section>`;
+};
+
+const taxonomyChips = (guide) => {
+  const taxonomy = guide.taxonomy || {};
+  const groups = [
+    ['Class', taxonomy.classTags || []],
+    ['Status', taxonomy.statusTags || []],
+    ['Route', taxonomy.routeTags || []],
+    ['Format', taxonomy.formatTags || []]
+  ];
+
+  return groups
+    .flatMap(([group, tags]) => tags.map((tag) => `<span class="taxonomy-chip"><span class="taxonomy-chip-label">${escapeHtml(group)}</span>${escapeHtml(tag)}</span>`))
+    .join('\n          ');
+};
+
+const acronymPanel = (guide) => {
+  const acronym = guide.acronymInfo;
+  if (!acronym || !acronym.code) return '';
+
+  const meaning = acronym.meaning
+    ? `<p><strong>Meaning:</strong> ${escapeHtml(acronym.meaning)}</p>`
+    : '<p><strong>Meaning:</strong> Not publicly defined by the source materials.</p>';
+
+  const note = acronym.note ? `<p>${escapeHtml(acronym.note)}</p>` : '';
+
+  return `<section class="guide-section acronym-panel">
+        <h2>Acronym Context</h2>
+        <p><strong>Code:</strong> ${escapeHtml(acronym.code)}</p>
+        ${meaning}
+        ${note}
+      </section>`;
+};
+
+const compositionPanel = (guide) => {
+  if (!Array.isArray(guide.composition) || guide.composition.length === 0) return '';
+
+  const items = guide.composition
+    .map((component) => {
+      const amount = component.amount ? ` <span class="composition-amount">${escapeHtml(component.amount)}</span>` : '';
+      return `<li><span class="composition-name">${escapeHtml(component.name)}</span>${amount}</li>`;
+    })
+    .join('\n            ');
+
+  return `<section class="guide-section composition-panel">
+        <h2>Composition</h2>
+        <ul class="composition-list">
+            ${items}
+        </ul>
+      </section>`;
+};
+
+const unique = (values) => {
+  const result = [];
+  for (const item of values) {
+    if (!item || result.includes(item)) continue;
+    result.push(item);
+  }
+  return result;
 };
 
 const writeGuidePages = () => {
@@ -73,6 +135,9 @@ const writeGuidePages = () => {
   }
 
   for (const guide of guides) {
+    const displayTitle = guide.displayTitle || guide.title;
+    const subtitle = guide.subtitle || guide.heroSummary;
+
     const citationsHtml = guide.citations.map((citation) => {
       const citationId = escapeHtml(citation.id);
       const title = escapeHtml(citation.title);
@@ -94,17 +159,19 @@ const writeGuidePages = () => {
       : 'No common aliases listed';
 
     const canonicalUrl = `${SITE_URL}/guides/${guide.slug}.html`;
+    const alternateNames = unique([guide.title, ...(guide.aliases || [])]);
+
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'MedicalWebPage',
-      name: `${guide.title} Guide`,
+      name: `${displayTitle} Guide`,
       url: canonicalUrl,
       dateModified: guide.lastReviewed,
       description: guide.metaDescription,
       about: {
         '@type': 'Drug',
-        name: guide.title,
-        alternateName: guide.aliases
+        name: displayTitle,
+        alternateName: alternateNames
       },
       publisher: {
         '@type': 'Organization',
@@ -113,7 +180,9 @@ const writeGuidePages = () => {
     };
 
     let page = guideTemplate;
-    page = page.replace(/{{TITLE}}/g, escapeHtml(guide.title));
+    page = page.replace(/{{SEO_TITLE}}/g, escapeHtml(`${displayTitle} Guide - ShotClock Learn`));
+    page = page.replace(/{{DISPLAY_TITLE}}/g, escapeHtml(displayTitle));
+    page = page.replace(/{{SUBTITLE}}/g, escapeHtml(subtitle));
     page = page.replace(/{{META_DESCRIPTION}}/g, escapeHtml(guide.metaDescription));
     page = page.replace(/{{CANONICAL_URL}}/g, escapeHtml(canonicalUrl));
     page = page.replace(/{{JSON_LD}}/g, JSON.stringify(jsonLd, null, 2));
@@ -123,6 +192,9 @@ const writeGuidePages = () => {
     page = page.replace(/{{LAST_REVIEWED}}/g, escapeHtml(guide.lastReviewed));
     page = page.replace(/{{HERO_SUMMARY}}/g, escapeHtml(guide.heroSummary));
     page = page.replace(/{{ALIASES}}/g, aliases);
+    page = page.replace(/{{TAXONOMY_CHIPS_HTML}}/g, taxonomyChips(guide));
+    page = page.replace(/{{ACRONYM_PANEL_HTML}}/g, acronymPanel(guide));
+    page = page.replace(/{{COMPOSITION_PANEL_HTML}}/g, compositionPanel(guide));
     page = page.replace(/{{WARNING_BLOCK}}/g, warningBlock(guide));
     page = page.replace(/{{DOSING_OVERVIEW}}/g, formatWithCitations(guide.dosingSection.overview));
     page = page.replace(/{{PROTOCOL_PATTERNS_HTML}}/g, toListItems(guide.dosingSection.protocolPatterns));
@@ -138,10 +210,15 @@ const writeGuidePages = () => {
 
 const writeUpdatesPage = () => {
   const updatesHtml = updates
+    .slice()
     .sort((a, b) => b.date.localeCompare(a.date))
     .map((item) => {
       const impacted = (item.impactedGuides || [])
-        .map((slug) => `<a href="guides/${escapeHtml(slug)}.html" class="update-link">${escapeHtml(slug)}</a>`)
+        .map((slug) => {
+          const guide = guideBySlug.get(slug);
+          const label = guide?.displayTitle || guide?.title || slug;
+          return `<a href="guides/${escapeHtml(slug)}.html" class="update-link">${escapeHtml(label)}</a>`;
+        })
         .join(' ');
 
       return `<article class="update-card" id="${escapeHtml(item.id)}">
@@ -164,8 +241,9 @@ const writeUpdatesPage = () => {
 };
 
 const writeUpdatesFeed = () => {
-  const feedItems = updates
-    .sort((a, b) => b.date.localeCompare(a.date))
+  const sortedUpdates = updates.slice().sort((a, b) => b.date.localeCompare(a.date));
+
+  const feedItems = sortedUpdates
     .map((item) => {
       const url = `${SITE_URL}/updates.html#${item.id}`;
       return `<entry>
@@ -182,7 +260,7 @@ const writeUpdatesFeed = () => {
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>${SITE_URL}/updates.xml</id>
   <title>ShotClock Guide Updates</title>
-  <updated>${updates[0]?.date || '2026-02-22'}T00:00:00Z</updated>
+  <updated>${sortedUpdates[0]?.date || BUILD_DATE}T00:00:00Z</updated>
   <link href="${SITE_URL}/updates.xml" rel="self"/>
   <link href="${SITE_URL}/updates.html"/>
   <author><name>ShotClock</name></author>
@@ -195,7 +273,6 @@ ${feedItems}
 
 const writeSitemap = () => {
   const staticPaths = [
-    '/',
     '/index.html',
     '/library.html',
     '/updates.html',
@@ -204,16 +281,23 @@ const writeSitemap = () => {
     '/terms.html'
   ];
 
-  const guidePaths = guides.map((guide) => `/guides/${guide.slug}.html`);
-  const allPaths = [...new Set([...staticPaths, ...guidePaths])];
+  const staticEntries = staticPaths
+    .map((urlPath) => ({ path: urlPath, lastmod: BUILD_DATE }));
 
-  const entries = allPaths
-    .map((urlPath) => `  <url>\n    <loc>${SITE_URL}${urlPath}</loc>\n    <lastmod>2026-02-22</lastmod>\n  </url>`)
+  const guideEntries = guides.map((guide) => ({
+    path: `/guides/${guide.slug}.html`,
+    lastmod: guide.lastReviewed || BUILD_DATE
+  }));
+
+  const allEntries = [...staticEntries, ...guideEntries];
+
+  const xmlEntries = allEntries
+    .map((entry) => `  <url>\n    <loc>${SITE_URL}${entry.path}</loc>\n    <lastmod>${entry.lastmod}</lastmod>\n  </url>`)
     .join('\n');
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${entries}
+${xmlEntries}
 </urlset>
 `;
 
@@ -221,12 +305,7 @@ ${entries}
 };
 
 const writeRobots = () => {
-  const robots = `User-agent: *
-Allow: /
-
-Sitemap: ${SITE_URL}/sitemap.xml
-`;
-
+  const robots = `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`;
   fs.writeFileSync(path.join(root, 'robots.txt'), robots);
 };
 

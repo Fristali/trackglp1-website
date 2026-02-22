@@ -36,18 +36,58 @@
 
       <section class="directory-controls" aria-label="Guide search and filter controls">
         <label for="guide-search" class="directory-label">Search guides</label>
-        <input id="guide-search" class="guide-search" type="search" placeholder="Search by name, alias, or category (e.g., semaglutide, peptide, magnesium)">
+        <input id="guide-search" class="guide-search" type="search" placeholder="Search by name, alias, class, or status">
 
-        <div class="filter-row" role="group" aria-label="Guide filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="medications">Medications</button>
-          <button class="filter-btn" data-filter="peptides">Peptides</button>
-          <button class="filter-btn" data-filter="support">Support</button>
-          <button class="filter-btn" data-filter="minerals">Minerals</button>
-          <button class="filter-btn" data-filter="experimental">Experimental</button>
+        <div class="facet-grid" aria-label="Multi-facet guide filters">
+          <fieldset class="facet-group">
+            <legend class="facet-label">Class</legend>
+            <div class="facet-chips">
+              <button type="button" class="facet-chip" data-facet="class" data-value="peptide">Peptide</button>
+              <button type="button" class="facet-chip" data-facet="class" data-value="glp-1-gip">GLP-1/GIP</button>
+              <button type="button" class="facet-chip" data-facet="class" data-value="hormone">Hormone</button>
+              <button type="button" class="facet-chip" data-facet="class" data-value="injectable-compound">Injectable Compound</button>
+              <button type="button" class="facet-chip" data-facet="class" data-value="oral-compound">Oral Compound</button>
+              <button type="button" class="facet-chip" data-facet="class" data-value="vitamin">Vitamin</button>
+              <button type="button" class="facet-chip" data-facet="class" data-value="mineral">Mineral</button>
+              <button type="button" class="facet-chip" data-facet="class" data-value="supportive">Supportive</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="facet-group">
+            <legend class="facet-label">Status</legend>
+            <div class="facet-chips">
+              <button type="button" class="facet-chip" data-facet="status" data-value="approved">Approved</button>
+              <button type="button" class="facet-chip" data-facet="status" data-value="experimental">Experimental</button>
+              <button type="button" class="facet-chip" data-facet="status" data-value="regional-approval">Regional Approval</button>
+              <button type="button" class="facet-chip" data-facet="status" data-value="discontinued">Discontinued</button>
+              <button type="button" class="facet-chip" data-facet="status" data-value="support-nutrient">Support/Nutrient</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="facet-group">
+            <legend class="facet-label">Route</legend>
+            <div class="facet-chips">
+              <button type="button" class="facet-chip" data-facet="route" data-value="injectable">Injectable</button>
+              <button type="button" class="facet-chip" data-facet="route" data-value="oral">Oral</button>
+              <button type="button" class="facet-chip" data-facet="route" data-value="mixed-unknown">Mixed/Unknown</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="facet-group">
+            <legend class="facet-label">Format</legend>
+            <div class="facet-chips">
+              <button type="button" class="facet-chip" data-facet="format" data-value="single-compound">Single Compound</button>
+              <button type="button" class="facet-chip" data-facet="format" data-value="blend">Blend</button>
+            </div>
+          </fieldset>
         </div>
 
-        <p class="directory-meta" id="directory-meta">Loading guide directory...</p>
+        <div class="directory-meta-row">
+          <p class="directory-meta" id="directory-meta">Loading guide directory...</p>
+          <button type="button" class="btn btn-outline btn-small" id="clear-filters">Clear filters</button>
+        </div>
+
+        <div id="active-filters" class="active-filters" aria-live="polite"></div>
       </section>
 
       <section class="directory-grid" id="guide-grid" aria-live="polite"></section>
@@ -109,27 +149,40 @@
   <script>
     (function () {
       const searchInput = document.getElementById('guide-search');
-      const filterButtons = Array.from(document.querySelectorAll('.filter-btn'));
       const grid = document.getElementById('guide-grid');
       const meta = document.getElementById('directory-meta');
       const updatesGrid = document.getElementById('latest-updates');
+      const activeFiltersEl = document.getElementById('active-filters');
+      const clearFiltersButton = document.getElementById('clear-filters');
+      const facetChips = Array.from(document.querySelectorAll('.facet-chip'));
+
+      const state = {
+        q: '',
+        selected: {
+          class: new Set(),
+          status: new Set(),
+          route: new Set(),
+          format: new Set()
+        }
+      };
 
       let guides = [];
-      let currentFilter = 'all';
-      let currentQuery = '';
 
-      const normalize = (value) => String(value || '').toLowerCase();
+      const FACET_KEYS = ['class', 'status', 'route', 'format'];
 
-      const resolveGroup = (guide) => {
-        const category = normalize(guide.category);
-        const status = normalize(guide.status);
+      const slugify = (value) => String(value || '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
 
-        if (category.includes('mineral')) return 'minerals';
-        if (status.includes('experimental') || status.includes('discontinued') || status.includes('regional')) return 'experimental';
-        if (category.includes('glp-1') || category.includes('gip') || category.includes('insulin') || category.includes('metformin')) return 'medications';
-        if (category.includes('peptide') || category.includes('gh secretagogue') || category.includes('nootropic') || category.includes('anti-aging') || category.includes('healing')) return 'peptides';
-        return 'support';
-      };
+      const normalize = (value) => String(value || '').toLowerCase().trim();
+
+      const escapeHtml = (value) => String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
 
       const statusClass = (status) => {
         const value = normalize(status);
@@ -141,44 +194,132 @@
         return 'status-support';
       };
 
+      const hasParams = (params) => FACET_KEYS.some((key) => params.has(key)) || params.has('q');
+
+      const restoreStateFromUrl = () => {
+        const params = new URLSearchParams(window.location.search);
+
+        if (!hasParams(params)) {
+          state.selected.class.add('peptide');
+          return;
+        }
+
+        state.q = normalize(params.get('q') || '');
+
+        FACET_KEYS.forEach((facet) => {
+          const raw = params.get(facet);
+          if (!raw) return;
+          raw.split(',').map((item) => normalize(item)).filter(Boolean).forEach((item) => state.selected[facet].add(item));
+        });
+      };
+
+      const syncUrl = () => {
+        const params = new URLSearchParams();
+
+        if (state.q) params.set('q', state.q);
+
+        FACET_KEYS.forEach((facet) => {
+          const values = Array.from(state.selected[facet]).sort();
+          if (values.length > 0) {
+            params.set(facet, values.join(','));
+          }
+        });
+
+        const query = params.toString();
+        const nextUrl = query ? `library.html?${query}` : 'library.html';
+        window.history.replaceState({}, '', nextUrl);
+      };
+
+      const facetMatch = (guideFacetValues, selectedValues) => {
+        if (selectedValues.size === 0) return true;
+        const normalizedValues = (guideFacetValues || []).map((value) => slugify(value));
+        return Array.from(selectedValues).some((value) => normalizedValues.includes(value));
+      };
+
+      const buildSearchIndex = (guide) => [
+        guide.slug,
+        guide.title,
+        guide.displayTitle,
+        guide.subtitle,
+        guide.category,
+        guide.status,
+        ...(guide.aliases || []),
+        ...(guide.taxonomy?.classTags || []),
+        ...(guide.taxonomy?.statusTags || []),
+        ...(guide.taxonomy?.routeTags || []),
+        ...(guide.taxonomy?.formatTags || [])
+      ].join(' ').toLowerCase();
+
+      const renderActiveFilters = () => {
+        const chips = [];
+
+        if (state.q) {
+          chips.push(`<button class="active-filter-chip" data-remove="q">Search: ${escapeHtml(state.q)}</button>`);
+        }
+
+        FACET_KEYS.forEach((facet) => {
+          Array.from(state.selected[facet]).forEach((value) => {
+            const label = value.replace(/-/g, ' ');
+            chips.push(`<button class="active-filter-chip" data-remove="${facet}" data-value="${escapeHtml(value)}">${escapeHtml(label)}</button>`);
+          });
+        });
+
+        activeFiltersEl.innerHTML = chips.length > 0
+          ? chips.join('')
+          : '<p class="active-filters-empty">Peptides-first is active by default when no URL filters are present.</p>';
+      };
+
       const renderGuides = () => {
         const filtered = guides.filter((guide) => {
-          const haystack = [guide.slug, guide.title, guide.category, guide.status, ...(guide.aliases || [])]
-            .join(' ')
-            .toLowerCase();
+          const matchesQuery = !state.q || guide.searchIndex.includes(state.q);
 
-          const matchesQuery = currentQuery.length === 0 || haystack.includes(currentQuery);
-          const matchesFilter = currentFilter === 'all' || resolveGroup(guide) === currentFilter;
+          if (!matchesQuery) return false;
 
-          return matchesQuery && matchesFilter;
+          const taxonomy = guide.taxonomy || {};
+
+          const matchesClass = facetMatch(taxonomy.classTags, state.selected.class);
+          const matchesStatus = facetMatch(taxonomy.statusTags, state.selected.status);
+          const matchesRoute = facetMatch(taxonomy.routeTags, state.selected.route);
+          const matchesFormat = facetMatch(taxonomy.formatTags, state.selected.format);
+
+          return matchesClass && matchesStatus && matchesRoute && matchesFormat;
         });
 
         meta.textContent = `${filtered.length} guides shown out of ${guides.length}.`;
 
         if (filtered.length === 0) {
-          grid.innerHTML = '<article class="directory-card"><h3>No guides match</h3><p>Try a broader search term or switch to the All filter.</p></article>';
+          grid.innerHTML = '<article class="directory-card"><h3>No guides match these filters</h3><p>Try removing one facet or broadening the search query.</p></article>';
           return;
         }
 
-        grid.innerHTML = filtered
-          .map((guide) => {
-            const aliases = (guide.aliases || []).slice(0, 3).join(', ');
-            return `
-              <article class="directory-card">
-                <div class="directory-card-head">
-                  <span class="status-badge ${statusClass(guide.status)}">${guide.statusLabel || guide.status}</span>
-                  <span class="status-badge status-category">${guide.category}</span>
-                </div>
-                <h3><a href="guides/${guide.slug}.html">${guide.title}</a></h3>
-                <p>${guide.heroSummary}</p>
-                <p class="guide-aliases">Aliases: ${aliases || 'No common aliases listed'}</p>
-                <div class="directory-card-actions">
-                  <a class="btn btn-outline" href="guides/${guide.slug}.html">Open guide</a>
-                </div>
-              </article>
-            `;
-          })
-          .join('');
+        grid.innerHTML = filtered.map((guide) => {
+          const aliases = (guide.aliases || []).slice(0, 3).join(', ');
+          const tags = [
+            ...(guide.taxonomy?.classTags || []),
+            ...(guide.taxonomy?.statusTags || []),
+            ...(guide.taxonomy?.routeTags || []),
+            ...(guide.taxonomy?.formatTags || [])
+          ];
+
+          return `
+            <article class="directory-card">
+              <div class="directory-card-head">
+                <span class="status-badge ${statusClass(guide.status)}">${escapeHtml(guide.statusLabel || guide.status)}</span>
+                <span class="status-badge status-category">${escapeHtml(guide.category)}</span>
+              </div>
+              <h3><a href="guides/${escapeHtml(guide.slug)}.html">${escapeHtml(guide.displayTitle || guide.title)}</a></h3>
+              <p class="directory-subtitle">${escapeHtml(guide.subtitle || guide.heroSummary || '')}</p>
+              <p>${escapeHtml(guide.heroSummary || '')}</p>
+              <div class="directory-tag-wrap">
+                ${tags.map((tag) => `<span class="directory-taxonomy-tag">${escapeHtml(tag)}</span>`).join('')}
+              </div>
+              <p class="guide-aliases">Aliases: ${escapeHtml(aliases || 'No common aliases listed')}</p>
+              <div class="directory-card-actions">
+                <a class="btn btn-outline" href="guides/${escapeHtml(guide.slug)}.html">Open guide</a>
+              </div>
+            </article>
+          `;
+        }).join('');
       };
 
       const renderUpdates = (updates) => {
@@ -188,17 +329,21 @@
           .map((item) => {
             const links = (item.impactedGuides || [])
               .slice(0, 4)
-              .map((slug) => `<a href="guides/${slug}.html" class="update-link">${slug}</a>`)
+              .map((slug) => {
+                const guide = guides.find((entry) => entry.slug === slug);
+                const label = guide?.displayTitle || guide?.title || slug;
+                return `<a href="guides/${escapeHtml(slug)}.html" class="update-link">${escapeHtml(label)}</a>`;
+              })
               .join(' ');
 
             return `
               <article class="update-card compact">
                 <div class="update-head">
-                  <p class="update-date">${item.date}</p>
-                  <span class="status-badge status-category">v${item.version}</span>
+                  <p class="update-date">${escapeHtml(item.date)}</p>
+                  <span class="status-badge status-category">v${escapeHtml(item.version)}</span>
                 </div>
-                <h3>${item.title}</h3>
-                <p>${item.summary}</p>
+                <h3>${escapeHtml(item.title)}</h3>
+                <p>${escapeHtml(item.summary)}</p>
                 <p class="update-links-inline">${links}</p>
               </article>
             `;
@@ -206,29 +351,76 @@
           .join('');
       };
 
-      const setFilter = (filter) => {
-        currentFilter = filter;
-        filterButtons.forEach((button) => {
-          button.classList.toggle('active', button.dataset.filter === filter);
+      const updateFacetButtons = () => {
+        facetChips.forEach((chip) => {
+          const facet = chip.dataset.facet;
+          const value = chip.dataset.value;
+          chip.classList.toggle('active', state.selected[facet].has(value));
         });
+      };
+
+      const rerender = () => {
+        syncUrl();
+        updateFacetButtons();
+        renderActiveFilters();
         renderGuides();
       };
 
       searchInput.addEventListener('input', (event) => {
-        currentQuery = normalize(event.target.value.trim());
-        renderGuides();
+        state.q = normalize(event.target.value);
+        rerender();
       });
 
-      filterButtons.forEach((button) => {
-        button.addEventListener('click', () => setFilter(button.dataset.filter));
+      facetChips.forEach((chip) => {
+        chip.addEventListener('click', () => {
+          const facet = chip.dataset.facet;
+          const value = chip.dataset.value;
+          if (state.selected[facet].has(value)) {
+            state.selected[facet].delete(value);
+          } else {
+            state.selected[facet].add(value);
+          }
+          rerender();
+        });
       });
+
+      activeFiltersEl.addEventListener('click', (event) => {
+        const button = event.target.closest('button[data-remove]');
+        if (!button) return;
+
+        const facet = button.dataset.remove;
+
+        if (facet === 'q') {
+          state.q = '';
+          searchInput.value = '';
+        } else {
+          state.selected[facet].delete(button.dataset.value);
+        }
+
+        rerender();
+      });
+
+      clearFiltersButton.addEventListener('click', () => {
+        state.q = '';
+        searchInput.value = '';
+        FACET_KEYS.forEach((facet) => state.selected[facet].clear());
+        rerender();
+      });
+
+      restoreStateFromUrl();
+      searchInput.value = state.q;
 
       Promise.all([
         fetch('content/guides.json', { cache: 'no-store' }).then((res) => res.json()),
         fetch('content/updates.json', { cache: 'no-store' }).then((res) => res.json())
       ])
         .then(([guideData, updateData]) => {
-          guides = guideData.slice().sort((a, b) => a.title.localeCompare(b.title));
+          guides = guideData
+            .map((guide) => ({ ...guide, searchIndex: buildSearchIndex(guide) }))
+            .sort((a, b) => (a.displayTitle || a.title).localeCompare(b.displayTitle || b.title));
+
+          updateFacetButtons();
+          renderActiveFilters();
           renderGuides();
           renderUpdates(updateData);
         })
