@@ -165,6 +165,7 @@
           format: new Set()
         }
       };
+      const defaultPeptideSeed = { active: false };
 
       let guides = [];
 
@@ -201,9 +202,11 @@
 
         if (!hasParams(params)) {
           state.selected.class.add('peptide');
+          defaultPeptideSeed.active = true;
           return;
         }
 
+        defaultPeptideSeed.active = false;
         state.q = normalize(params.get('q') || '');
 
         FACET_KEYS.forEach((facet) => {
@@ -228,6 +231,29 @@
         const query = params.toString();
         const nextUrl = query ? `library.html?${query}` : 'library.html';
         window.history.replaceState({}, '', nextUrl);
+      };
+
+      const releaseDefaultPeptideSeed = (facet, value) => {
+        if (!defaultPeptideSeed.active) return;
+
+        const onlyDefaultPeptide = state.selected.class.size === 1
+          && state.selected.class.has('peptide')
+          && state.selected.status.size === 0
+          && state.selected.route.size === 0
+          && state.selected.format.size === 0
+          && !state.q;
+
+        if (!onlyDefaultPeptide) {
+          defaultPeptideSeed.active = false;
+          return;
+        }
+
+        if (facet === 'class' && value === 'peptide') {
+          return;
+        }
+
+        state.selected.class.clear();
+        defaultPeptideSeed.active = false;
       };
 
       const facetMatch = (guideFacetValues, selectedValues) => {
@@ -367,6 +393,7 @@
       };
 
       searchInput.addEventListener('input', (event) => {
+        releaseDefaultPeptideSeed('q', '');
         state.q = normalize(event.target.value);
         rerender();
       });
@@ -375,6 +402,7 @@
         chip.addEventListener('click', () => {
           const facet = chip.dataset.facet;
           const value = chip.dataset.value;
+          releaseDefaultPeptideSeed(facet, value);
           if (state.selected[facet].has(value)) {
             state.selected[facet].delete(value);
           } else {
@@ -404,6 +432,7 @@
         state.q = '';
         searchInput.value = '';
         FACET_KEYS.forEach((facet) => state.selected[facet].clear());
+        defaultPeptideSeed.active = false;
         rerender();
       });
 
