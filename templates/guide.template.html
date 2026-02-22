@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}} Guide - ShotClock Learn</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <link rel="canonical" href="{{CANONICAL_URL}}">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <script type="application/ld+json">
+  {{JSON_LD}}
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a class="nav-brand" href="../index.html" aria-label="ShotClock home">
+        <span class="nav-brand-mark">SC</span>
+        <span class="nav-brand-text">ShotClock</span>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../library.html" class="active">Learn</a>
+        <a href="../updates.html">Updates</a>
+        <a href="../support.html">Support</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="guide-content">
+    <div class="container guide-container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="../library.html">Learn</a>
+        <span>/</span>
+        <span>{{TITLE}}</span>
+      </nav>
+
+      <header class="guide-hero">
+        <div class="guide-head-meta">
+          <span class="status-badge {{STATUS_CLASS}}">{{STATUS_LABEL}}</span>
+          <span class="status-badge status-category">{{CATEGORY}}</span>
+          <span class="guide-date">Reviewed: {{LAST_REVIEWED}}</span>
+        </div>
+        <h1>{{TITLE}}</h1>
+        <p>{{HERO_SUMMARY}}</p>
+        <p class="guide-aliases">Also known as: {{ALIASES}}</p>
+      </header>
+
+      {{WARNING_BLOCK}}
+
+      <div class="guide-layout">
+        <section class="guide-section">
+          <h2>Dosing and Protocol Context</h2>
+          <p>{{DOSING_OVERVIEW}}</p>
+          <h3>Common protocol patterns</h3>
+          <ul>
+            {{PROTOCOL_PATTERNS_HTML}}
+          </ul>
+          <h3>Monitoring windows</h3>
+          <ul>
+            {{MONITORING_WINDOWS_HTML}}
+          </ul>
+        </section>
+
+        <section class="guide-section">
+          <h2>What to Track in ShotClock</h2>
+          <ul>
+            {{TRACKING_SIGNALS_HTML}}
+          </ul>
+        </section>
+
+        <section class="guide-section">
+          <h2>Safety and Red Flags</h2>
+          <ul>
+            {{SAFETY_FLAGS_HTML}}
+          </ul>
+        </section>
+
+        <section class="guide-section">
+          <h2>Questions for Your Provider</h2>
+          <ul>
+            {{PROVIDER_QUESTIONS_HTML}}
+          </ul>
+        </section>
+
+        <section class="guide-section">
+          <h2>Sources</h2>
+          <ol class="sources-list">
+            {{CITATIONS_HTML}}
+          </ol>
+        </section>
+
+        <section class="guide-section compliance-box">
+          <h2>Compliance and Medical Notice</h2>
+          <p>Educational content only. This page is not medical advice, diagnosis, or a dosing prescription.</p>
+          <p>For severe reactions or urgent symptoms in the United States, call 911 and seek immediate emergency care.</p>
+          <p>Dose changes and protocol decisions should be made with a licensed healthcare professional.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <section class="footer-section">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="../index.html#features">Why ShotClock</a></li>
+            <li><a href="../index.html#download">Get App Access</a></li>
+            <li><a href="../support.html">Support</a></li>
+          </ul>
+        </section>
+
+        <section class="footer-section">
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="../library.html">Guide Directory</a></li>
+            <li><a href="../updates.html">Guide Updates</a></li>
+            <li><a href="../guides/semaglutide.html">Featured: Semaglutide</a></li>
+          </ul>
+        </section>
+
+        <section class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Service</a></li>
+            <li><a href="mailto:legal@trackglp1.com">Legal Contact</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ShotClock. All rights reserved.</p>
+        <p class="disclaimer">Educational content only. Always consult a licensed healthcare professional.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

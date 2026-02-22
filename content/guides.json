@@ -1,0 +1,4196 @@
+[
+  {
+    "slug": "aod-9604",
+    "title": "AOD-9604",
+    "aliases": [
+      "HGH Fragment",
+      "AOD9604"
+    ],
+    "category": "Fat Loss Peptide",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "AOD-9604 guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. AOD-9604 is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Clinical and clinic protocols commonly report 250-1000 mcg once daily, usually in morning or fasted windows. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for AOD-9604 in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "AOD-9604: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=AOD-9604",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "AOD-9604: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=AOD-9604",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "AOD-9604: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=AOD-9604",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "AOD-9604: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=AOD-9604+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "b12",
+    "title": "Vitamin B12",
+    "aliases": [
+      "Cyanocobalamin",
+      "Methylcobalamin"
+    ],
+    "category": "Vitamin",
+    "status": "nutrient",
+    "statusLabel": "Nutrient Support",
+    "metaDescription": "Vitamin B12 guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. Vitamin B12 is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Common injectable protocols use 1000-5000 mcg weekly, with frequency individualized to lab status and symptoms. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Administration consistency and lab follow-up dates.",
+      "Energy, neurologic, or musculoskeletal symptom trends over weeks.",
+      "Route tolerance and adherence barriers."
+    ],
+    "safetyFlags": [
+      "High-dose nutrient plans can still cause toxicity or interaction risk and require lab-guided follow-up.",
+      "Coordinate with current medications (for example thyroid, anticoagulant, or renal regimens).",
+      "Escalate signs of overload, deficiency progression, or unexpected neurologic/cardiac symptoms."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Vitamin B12 in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Vitamin B12: FDA/openFDA labeling and safety records",
+        "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:Vitamin%20B12&limit=1",
+        "sourceType": "FDA API",
+        "publisher": "U.S. Food and Drug Administration",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Vitamin B12: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Vitamin%20B12",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Vitamin B12: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Vitamin%20B12",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Vitamin B12: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Vitamin%20B12+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "beinaglutide",
+    "title": "Beinaglutide",
+    "aliases": [
+      "Benaglutide",
+      "Beisu"
+    ],
+    "category": "GLP-1",
+    "status": "regional-approval",
+    "statusLabel": "Regional Approval",
+    "metaDescription": "Beinaglutide guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. Beinaglutide is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Published regimens often use 0.1-0.2 mg daily subcutaneous dosing, adjusted to tolerability. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Weekly adherence with exact injection-day drift tracking.",
+      "Nausea, reflux, bowel-pattern, and meal-size tolerance logs.",
+      "Weight trend slope and appetite-return timing across weekly curve."
+    ],
+    "safetyFlags": [
+      "Regulatory approval may be regional, not universal; confirm local legal/clinical context.",
+      "Quality and labeling standards can differ across jurisdictions.",
+      "Escalate adverse effects and confirm dose rationale with local licensed clinicians."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Beinaglutide in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Beinaglutide: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=Beinaglutide",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Beinaglutide: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Beinaglutide",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Beinaglutide: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Beinaglutide",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Beinaglutide: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Beinaglutide+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "boron",
+    "title": "Boron",
+    "aliases": [
+      "B"
+    ],
+    "category": "Mineral",
+    "status": "nutrient",
+    "statusLabel": "Mineral Support",
+    "metaDescription": "Boron guide with evidence-linked intake context, safety limits, tracking cues, and provider questions.",
+    "heroSummary": "Boron guidance is educational and should be individualized with labs, renal/cardiac context, and clinician input.",
+    "dosingSection": {
+      "overview": "Use lab status, dietary intake, kidney function, and indication to individualize boron dosing strategy. [C1]",
+      "protocolPatterns": [
+        "Start with conservative supplementation ranges when clinically appropriate, then adjust using objective labs. [C1]",
+        "Account for interactions with current medications, thyroid/renal status, and gastrointestinal tolerance. [C2]"
+      ],
+      "monitoringWindows": [
+        "Define recheck intervals before starting supplementation so adjustments are data-guided. [C1]",
+        "Track symptom trend plus objective biomarkers to avoid long, unverified high-dose exposure. [C3]"
+      ]
+    },
+    "trackingSignals": [
+      "Intake consistency and co-administered supplement timing.",
+      "Symptom trends tied to deficiency or excess risk windows.",
+      "Relevant lab checkpoints and clinician follow-up dates."
+    ],
+    "safetyFlags": [
+      "High-dose nutrient plans can still cause toxicity or interaction risk and require lab-guided follow-up.",
+      "Coordinate with current medications (for example thyroid, anticoagulant, or renal regimens).",
+      "Escalate signs of overload, deficiency progression, or unexpected neurologic/cardiac symptoms."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Boron in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Boron: NIH ODS health professional fact sheet",
+        "url": "https://ods.od.nih.gov/factsheets/Boron-HealthProfessional/",
+        "sourceType": "NIH ODS",
+        "publisher": "National Institutes of Health",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Boron: MedlinePlus evidence and safety context",
+        "url": "https://medlineplus.gov/?query=Boron",
+        "sourceType": "MedlinePlus",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Boron: PubMed clinical reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Boron+supplementation+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "bpc-157",
+    "title": "BPC-157",
+    "aliases": [
+      "Body Protection Compound 157"
+    ],
+    "category": "Healing Peptide",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "BPC-157 guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. BPC-157 is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Clinic and research-use protocols commonly report 250-1000 mcg daily in divided or once-daily dosing. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for BPC-157 in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "BPC-157: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=BPC-157",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "BPC-157: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=BPC-157",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "BPC-157: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=BPC-157",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "BPC-157: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=BPC-157+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "cagrisema",
+    "title": "CagriSema",
+    "aliases": [
+      "Cagrilintide + Semaglutide"
+    ],
+    "category": "Experimental",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "CagriSema guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. CagriSema is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Investigational combination studies use stepwise weekly escalation schedules and protocol-specific caps. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for CagriSema in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "CagriSema: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=CagriSema",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "CagriSema: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=CagriSema",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "CagriSema: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=CagriSema",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "CagriSema: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=CagriSema+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "calcium",
+    "title": "Calcium",
+    "aliases": [
+      "Ca"
+    ],
+    "category": "Mineral",
+    "status": "nutrient",
+    "statusLabel": "Mineral Support",
+    "metaDescription": "Calcium guide with evidence-linked intake context, safety limits, tracking cues, and provider questions.",
+    "heroSummary": "Calcium guidance is educational and should be individualized with labs, renal/cardiac context, and clinician input.",
+    "dosingSection": {
+      "overview": "Use lab status, dietary intake, kidney function, and indication to individualize calcium dosing strategy. [C1]",
+      "protocolPatterns": [
+        "Start with conservative supplementation ranges when clinically appropriate, then adjust using objective labs. [C1]",
+        "Account for interactions with current medications, thyroid/renal status, and gastrointestinal tolerance. [C2]"
+      ],
+      "monitoringWindows": [
+        "Define recheck intervals before starting supplementation so adjustments are data-guided. [C1]",
+        "Track symptom trend plus objective biomarkers to avoid long, unverified high-dose exposure. [C3]"
+      ]
+    },
+    "trackingSignals": [
+      "Intake consistency and co-administered supplement timing.",
+      "Symptom trends tied to deficiency or excess risk windows.",
+      "Relevant lab checkpoints and clinician follow-up dates."
+    ],
+    "safetyFlags": [
+      "High-dose nutrient plans can still cause toxicity or interaction risk and require lab-guided follow-up.",
+      "Coordinate with current medications (for example thyroid, anticoagulant, or renal regimens).",
+      "Escalate signs of overload, deficiency progression, or unexpected neurologic/cardiac symptoms."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Calcium in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Calcium: NIH ODS health professional fact sheet",
+        "url": "https://ods.od.nih.gov/factsheets/Calcium-HealthProfessional/",
+        "sourceType": "NIH ODS",
+        "publisher": "National Institutes of Health",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Calcium: MedlinePlus evidence and safety context",
+        "url": "https://medlineplus.gov/?query=Calcium",
+        "sourceType": "MedlinePlus",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Calcium: PubMed clinical reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Calcium+supplementation+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "chloride",
+    "title": "Chloride",
+    "aliases": [
+      "Cl"
+    ],
+    "category": "Mineral",
+    "status": "nutrient",
+    "statusLabel": "Mineral Support",
+    "metaDescription": "Chloride guide with evidence-linked intake context, safety limits, tracking cues, and provider questions.",
+    "heroSummary": "Chloride guidance is educational and should be individualized with labs, renal/cardiac context, and clinician input.",
+    "dosingSection": {
+      "overview": "Use lab status, dietary intake, kidney function, and indication to individualize chloride dosing strategy. [C1]",
+      "protocolPatterns": [
+        "Start with conservative supplementation ranges when clinically appropriate, then adjust using objective labs. [C1]",
+        "Account for interactions with current medications, thyroid/renal status, and gastrointestinal tolerance. [C2]"
+      ],
+      "monitoringWindows": [
+        "Define recheck intervals before starting supplementation so adjustments are data-guided. [C1]",
+        "Track symptom trend plus objective biomarkers to avoid long, unverified high-dose exposure. [C3]"
+      ]
+    },
+    "trackingSignals": [
+      "Intake consistency and co-administered supplement timing.",
+      "Symptom trends tied to deficiency or excess risk windows.",
+      "Relevant lab checkpoints and clinician follow-up dates."
+    ],
+    "safetyFlags": [
+      "High-dose nutrient plans can still cause toxicity or interaction risk and require lab-guided follow-up.",
+      "Coordinate with current medications (for example thyroid, anticoagulant, or renal regimens).",
+      "Escalate signs of overload, deficiency progression, or unexpected neurologic/cardiac symptoms."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Chloride in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Chloride: NIH ODS health professional fact sheet",
+        "url": "https://ods.od.nih.gov/factsheets/list-all/",
+        "sourceType": "NIH ODS",
+        "publisher": "National Institutes of Health",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Chloride: MedlinePlus evidence and safety context",
+        "url": "https://medlineplus.gov/?query=Chloride",
+        "sourceType": "MedlinePlus",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Chloride: PubMed clinical reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Chloride+supplementation+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "chromium",
+    "title": "Chromium",
+    "aliases": [
+      "Cr"
+    ],
+    "category": "Mineral",
+    "status": "nutrient",
+    "statusLabel": "Mineral Support",
+    "metaDescription": "Chromium guide with evidence-linked intake context, safety limits, tracking cues, and provider questions.",
+    "heroSummary": "Chromium guidance is educational and should be individualized with labs, renal/cardiac context, and clinician input.",
+    "dosingSection": {
+      "overview": "Use lab status, dietary intake, kidney function, and indication to individualize chromium dosing strategy. [C1]",
+      "protocolPatterns": [
+        "Start with conservative supplementation ranges when clinically appropriate, then adjust using objective labs. [C1]",
+        "Account for interactions with current medications, thyroid/renal status, and gastrointestinal tolerance. [C2]"
+      ],
+      "monitoringWindows": [
+        "Define recheck intervals before starting supplementation so adjustments are data-guided. [C1]",
+        "Track symptom trend plus objective biomarkers to avoid long, unverified high-dose exposure. [C3]"
+      ]
+    },
+    "trackingSignals": [
+      "Intake consistency and co-administered supplement timing.",
+      "Symptom trends tied to deficiency or excess risk windows.",
+      "Relevant lab checkpoints and clinician follow-up dates."
+    ],
+    "safetyFlags": [
+      "High-dose nutrient plans can still cause toxicity or interaction risk and require lab-guided follow-up.",
+      "Coordinate with current medications (for example thyroid, anticoagulant, or renal regimens).",
+      "Escalate signs of overload, deficiency progression, or unexpected neurologic/cardiac symptoms."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Chromium in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Chromium: NIH ODS health professional fact sheet",
+        "url": "https://ods.od.nih.gov/factsheets/Chromium-HealthProfessional/",
+        "sourceType": "NIH ODS",
+        "publisher": "National Institutes of Health",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Chromium: MedlinePlus evidence and safety context",
+        "url": "https://medlineplus.gov/?query=Chromium",
+        "sourceType": "MedlinePlus",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Chromium: PubMed clinical reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Chromium+supplementation+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "cjc-1295",
+    "title": "CJC-1295",
+    "aliases": [
+      "CJC1295 (no DAC)"
+    ],
+    "category": "GH Secretagogue",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "CJC-1295 guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. CJC-1295 is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Common research-use patterns report 100-300 mcg once or multiple times daily depending on stack design. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for CJC-1295 in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "CJC-1295: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=CJC-1295",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "CJC-1295: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=CJC-1295",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "CJC-1295: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=CJC-1295",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "CJC-1295: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=CJC-1295+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "cjc-dac",
+    "title": "CJC-1295 DAC",
+    "aliases": [
+      "CJC-DAC"
+    ],
+    "category": "GH Secretagogue",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "CJC-1295 DAC guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. CJC-1295 DAC is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Longer-acting DAC protocols often report 1-2 mg weekly with periodic cycle breaks. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for CJC-1295 DAC in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "CJC-1295 DAC: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=CJC-1295%20DAC",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "CJC-1295 DAC: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=CJC-1295%20DAC",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "CJC-1295 DAC: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=CJC-1295%20DAC",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "CJC-1295 DAC: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=CJC-1295%20DAC+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "copper",
+    "title": "Copper",
+    "aliases": [
+      "Cu"
+    ],
+    "category": "Mineral",
+    "status": "nutrient",
+    "statusLabel": "Mineral Support",
+    "metaDescription": "Copper guide with evidence-linked intake context, safety limits, tracking cues, and provider questions.",
+    "heroSummary": "Copper guidance is educational and should be individualized with labs, renal/cardiac context, and clinician input.",
+    "dosingSection": {
+      "overview": "Use lab status, dietary intake, kidney function, and indication to individualize copper dosing strategy. [C1]",
+      "protocolPatterns": [
+        "Start with conservative supplementation ranges when clinically appropriate, then adjust using objective labs. [C1]",
+        "Account for interactions with current medications, thyroid/renal status, and gastrointestinal tolerance. [C2]"
+      ],
+      "monitoringWindows": [
+        "Define recheck intervals before starting supplementation so adjustments are data-guided. [C1]",
+        "Track symptom trend plus objective biomarkers to avoid long, unverified high-dose exposure. [C3]"
+      ]
+    },
+    "trackingSignals": [
+      "Intake consistency and co-administered supplement timing.",
+      "Symptom trends tied to deficiency or excess risk windows.",
+      "Relevant lab checkpoints and clinician follow-up dates."
+    ],
+    "safetyFlags": [
+      "High-dose nutrient plans can still cause toxicity or interaction risk and require lab-guided follow-up.",
+      "Coordinate with current medications (for example thyroid, anticoagulant, or renal regimens).",
+      "Escalate signs of overload, deficiency progression, or unexpected neurologic/cardiac symptoms."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Copper in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Copper: NIH ODS health professional fact sheet",
+        "url": "https://ods.od.nih.gov/factsheets/Copper-HealthProfessional/",
+        "sourceType": "NIH ODS",
+        "publisher": "National Institutes of Health",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Copper: MedlinePlus evidence and safety context",
+        "url": "https://medlineplus.gov/?query=Copper",
+        "sourceType": "MedlinePlus",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Copper: PubMed clinical reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Copper+supplementation+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "danuglipron",
+    "title": "Danuglipron",
+    "aliases": [
+      "PF-06882961"
+    ],
+    "category": "Experimental",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "Danuglipron guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. Danuglipron is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Investigational oral dosing has been studied in daily and twice-daily formats with dose-limiting GI effects. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Danuglipron in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Danuglipron: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=Danuglipron",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Danuglipron: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Danuglipron",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Danuglipron: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Danuglipron",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Danuglipron: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Danuglipron+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "dulaglutide",
+    "title": "Dulaglutide",
+    "aliases": [
+      "Trulicity"
+    ],
+    "category": "GLP-1",
+    "status": "approved",
+    "statusLabel": "Approved",
+    "metaDescription": "Dulaglutide guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes labeled-use context and practical tracking priorities for clinician discussions. Dulaglutide is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Label pathways generally begin at 0.75 mg weekly and may increase to 1.5, 3.0, and 4.5 mg as tolerated. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Weekly adherence with exact injection-day drift tracking.",
+      "Nausea, reflux, bowel-pattern, and meal-size tolerance logs.",
+      "Weight trend slope and appetite-return timing across weekly curve."
+    ],
+    "safetyFlags": [
+      "Escalate severe GI symptoms, dehydration, persistent vomiting, or signs of allergic reaction immediately.",
+      "Do not change dose frequency or amount without licensed clinician direction.",
+      "Confirm contraindications, interactions, and renal/hepatic considerations before protocol changes."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Dulaglutide in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Dulaglutide: FDA/openFDA labeling and safety records",
+        "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:Dulaglutide&limit=1",
+        "sourceType": "FDA API",
+        "publisher": "U.S. Food and Drug Administration",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Dulaglutide: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Dulaglutide",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Dulaglutide: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Dulaglutide",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Dulaglutide: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Dulaglutide+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "ecnoglutide",
+    "title": "Ecnoglutide",
+    "aliases": [
+      "XW003"
+    ],
+    "category": "Experimental",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "Ecnoglutide guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. Ecnoglutide is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Investigational weekly schedules in trials use protocol-controlled escalation with exposure monitoring. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Ecnoglutide in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Ecnoglutide: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=Ecnoglutide",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Ecnoglutide: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Ecnoglutide",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Ecnoglutide: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Ecnoglutide",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Ecnoglutide: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Ecnoglutide+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "efpeglenatide",
+    "title": "Efpeglenatide",
+    "aliases": [
+      "AMG 133 (historical context)"
+    ],
+    "category": "GLP-1",
+    "status": "discontinued",
+    "statusLabel": "Discontinued/Legacy",
+    "metaDescription": "Efpeglenatide guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. Efpeglenatide is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Prior trial programs evaluated weekly 4-6 mg dosing tiers; active program availability varies by region. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Weekly adherence with exact injection-day drift tracking.",
+      "Nausea, reflux, bowel-pattern, and meal-size tolerance logs.",
+      "Weight trend slope and appetite-return timing across weekly curve."
+    ],
+    "safetyFlags": [
+      "Discontinued or region-limited compounds may have constrained safety/quality oversight by market.",
+      "Verify product legitimacy and clinician rationale before any use discussion.",
+      "Escalate adverse effects quickly because support infrastructure may be inconsistent."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Efpeglenatide in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Efpeglenatide: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=Efpeglenatide",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Efpeglenatide: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Efpeglenatide",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Efpeglenatide: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Efpeglenatide",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Efpeglenatide: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Efpeglenatide+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "epithalon",
+    "title": "Epithalon",
+    "aliases": [
+      "Epitalon"
+    ],
+    "category": "Anti-Aging Peptide",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "Epithalon guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. Epithalon is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Cycle-based protocols often cite 5-10 mg daily for short blocks with long off-cycles. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Epithalon in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Epithalon: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=Epithalon",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Epithalon: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Epithalon",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Epithalon: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Epithalon",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Epithalon: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Epithalon+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "exenatide",
+    "title": "Exenatide",
+    "aliases": [
+      "Byetta",
+      "Bydureon"
+    ],
+    "category": "GLP-1",
+    "status": "approved",
+    "statusLabel": "Approved",
+    "metaDescription": "Exenatide guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes labeled-use context and practical tracking priorities for clinician discussions. Exenatide is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Immediate-release labeling uses 5-10 mcg twice daily, while extended-release forms use 2 mg weekly. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Weekly adherence with exact injection-day drift tracking.",
+      "Nausea, reflux, bowel-pattern, and meal-size tolerance logs.",
+      "Weight trend slope and appetite-return timing across weekly curve."
+    ],
+    "safetyFlags": [
+      "Escalate severe GI symptoms, dehydration, persistent vomiting, or signs of allergic reaction immediately.",
+      "Do not change dose frequency or amount without licensed clinician direction.",
+      "Confirm contraindications, interactions, and renal/hepatic considerations before protocol changes."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Exenatide in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Exenatide: FDA/openFDA labeling and safety records",
+        "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:Exenatide&limit=1",
+        "sourceType": "FDA API",
+        "publisher": "U.S. Food and Drug Administration",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Exenatide: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Exenatide",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Exenatide: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Exenatide",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Exenatide: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Exenatide+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "fragment-176-191",
+    "title": "Fragment 176-191",
+    "aliases": [
+      "HGH Fragment 176-191"
+    ],
+    "category": "Fat Loss Peptide",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "Fragment 176-191 guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. Fragment 176-191 is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Non-labeled protocols commonly report 250-750 mcg once or twice daily in fasted periods. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Fragment 176-191 in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Fragment 176-191: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=Fragment%20176-191",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Fragment 176-191: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Fragment%20176-191",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Fragment 176-191: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Fragment%20176-191",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Fragment 176-191: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Fragment%20176-191+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "ghrp-2",
+    "title": "GHRP-2",
+    "aliases": [
+      "Growth Hormone Releasing Peptide-2"
+    ],
+    "category": "GH Secretagogue",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "GHRP-2 guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. GHRP-2 is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Research-use ranges often cite 100-300 mcg per dose, up to 2-3 administrations daily. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for GHRP-2 in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "GHRP-2: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=GHRP-2",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "GHRP-2: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=GHRP-2",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "GHRP-2: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=GHRP-2",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "GHRP-2: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=GHRP-2+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "ghrp-6",
+    "title": "GHRP-6",
+    "aliases": [
+      "Growth Hormone Releasing Peptide-6"
+    ],
+    "category": "GH Secretagogue",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "GHRP-6 guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. GHRP-6 is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Common protocols report 100-300 mcg per administration with hunger effects as a limiting factor. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for GHRP-6 in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "GHRP-6: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=GHRP-6",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "GHRP-6: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=GHRP-6",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "GHRP-6: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=GHRP-6",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "GHRP-6: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=GHRP-6+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "glutathione",
+    "title": "Glutathione",
+    "aliases": [
+      "GSH"
+    ],
+    "category": "Antioxidant",
+    "status": "support",
+    "statusLabel": "Supportive Therapy",
+    "metaDescription": "Glutathione guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. Glutathione is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Common injectable support protocols use 200-1000 mg per dose one to three times weekly. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Compounded/supportive products can vary by formulation and concentration.",
+      "Verify storage, sterility, and route-specific administration safety before use.",
+      "Escalate persistent injection-site reactions, systemic symptoms, or intolerance."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Glutathione in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Glutathione: FDA/openFDA labeling and safety records",
+        "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:Glutathione&limit=1",
+        "sourceType": "FDA API",
+        "publisher": "U.S. Food and Drug Administration",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Glutathione: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Glutathione",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Glutathione: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Glutathione",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Glutathione: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Glutathione+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "hcg",
+    "title": "Human Chorionic Gonadotropin (HCG)",
+    "aliases": [
+      "Pregnyl",
+      "Ovidrel"
+    ],
+    "category": "Hormone",
+    "status": "approved",
+    "statusLabel": "Approved",
+    "metaDescription": "Human Chorionic Gonadotropin (HCG) guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes labeled-use context and practical tracking priorities for clinician discussions. Human Chorionic Gonadotropin (HCG) is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Depending on indication, protocols vary widely; TRT-support workflows frequently use 250-1000 IU 2-3 times weekly. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Escalate severe GI symptoms, dehydration, persistent vomiting, or signs of allergic reaction immediately.",
+      "Do not change dose frequency or amount without licensed clinician direction.",
+      "Confirm contraindications, interactions, and renal/hepatic considerations before protocol changes."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Human Chorionic Gonadotropin (HCG) in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Human Chorionic Gonadotropin (HCG): FDA/openFDA labeling and safety records",
+        "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:Human%20Chorionic%20Gonadotropin&limit=1",
+        "sourceType": "FDA API",
+        "publisher": "U.S. Food and Drug Administration",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Human Chorionic Gonadotropin (HCG): DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Human%20Chorionic%20Gonadotropin",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Human Chorionic Gonadotropin (HCG): Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Human%20Chorionic%20Gonadotropin",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Human Chorionic Gonadotropin (HCG): PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Human%20Chorionic%20Gonadotropin+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "hexarelin",
+    "title": "Hexarelin",
+    "aliases": [
+      "Examorelin"
+    ],
+    "category": "GH Secretagogue",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "Hexarelin guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. Hexarelin is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Reported research protocols often use 100-200 mcg per administration with cycle limits to reduce desensitization. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Hexarelin in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Hexarelin: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=Hexarelin",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Hexarelin: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Hexarelin",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Hexarelin: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Hexarelin",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Hexarelin: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Hexarelin+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "insulin",
+    "title": "Insulin",
+    "aliases": [
+      "Humalog",
+      "Novolog",
+      "Lantus",
+      "Tresiba"
+    ],
+    "category": "Insulin",
+    "status": "approved",
+    "statusLabel": "Approved",
+    "metaDescription": "Insulin guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes labeled-use context and practical tracking priorities for clinician discussions. Insulin is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Insulin is individualized by type, glucose targets, and carbohydrate patterns; dosing requires clinician-directed plans. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Glucose response around meals and corrections.",
+      "Hypoglycemia timing, severity, and rescue actions.",
+      "Injection site rotation and insulin-on-board context."
+    ],
+    "safetyFlags": [
+      "Escalate severe GI symptoms, dehydration, persistent vomiting, or signs of allergic reaction immediately.",
+      "Do not change dose frequency or amount without licensed clinician direction.",
+      "Confirm contraindications, interactions, and renal/hepatic considerations before protocol changes."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Insulin in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Insulin: FDA/openFDA labeling and safety records",
+        "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:Insulin&limit=1",
+        "sourceType": "FDA API",
+        "publisher": "U.S. Food and Drug Administration",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Insulin: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Insulin",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Insulin: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Insulin",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Insulin: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Insulin+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "iodine",
+    "title": "Iodine",
+    "aliases": [
+      "I"
+    ],
+    "category": "Mineral",
+    "status": "nutrient",
+    "statusLabel": "Mineral Support",
+    "metaDescription": "Iodine guide with evidence-linked intake context, safety limits, tracking cues, and provider questions.",
+    "heroSummary": "Iodine guidance is educational and should be individualized with labs, renal/cardiac context, and clinician input.",
+    "dosingSection": {
+      "overview": "Use lab status, dietary intake, kidney function, and indication to individualize iodine dosing strategy. [C1]",
+      "protocolPatterns": [
+        "Start with conservative supplementation ranges when clinically appropriate, then adjust using objective labs. [C1]",
+        "Account for interactions with current medications, thyroid/renal status, and gastrointestinal tolerance. [C2]"
+      ],
+      "monitoringWindows": [
+        "Define recheck intervals before starting supplementation so adjustments are data-guided. [C1]",
+        "Track symptom trend plus objective biomarkers to avoid long, unverified high-dose exposure. [C3]"
+      ]
+    },
+    "trackingSignals": [
+      "Intake consistency and co-administered supplement timing.",
+      "Symptom trends tied to deficiency or excess risk windows.",
+      "Relevant lab checkpoints and clinician follow-up dates."
+    ],
+    "safetyFlags": [
+      "High-dose nutrient plans can still cause toxicity or interaction risk and require lab-guided follow-up.",
+      "Coordinate with current medications (for example thyroid, anticoagulant, or renal regimens).",
+      "Escalate signs of overload, deficiency progression, or unexpected neurologic/cardiac symptoms."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Iodine in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Iodine: NIH ODS health professional fact sheet",
+        "url": "https://ods.od.nih.gov/factsheets/Iodine-HealthProfessional/",
+        "sourceType": "NIH ODS",
+        "publisher": "National Institutes of Health",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Iodine: MedlinePlus evidence and safety context",
+        "url": "https://medlineplus.gov/?query=Iodine",
+        "sourceType": "MedlinePlus",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Iodine: PubMed clinical reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Iodine+supplementation+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "ipamorelin",
+    "title": "Ipamorelin",
+    "aliases": [
+      "IPA"
+    ],
+    "category": "GH Secretagogue",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "Ipamorelin guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. Ipamorelin is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Clinic protocols frequently cite 100-300 mcg once to three times daily, often paired with CJC variants. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Ipamorelin in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Ipamorelin: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=Ipamorelin",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Ipamorelin: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Ipamorelin",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Ipamorelin: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Ipamorelin",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Ipamorelin: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Ipamorelin+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "iron",
+    "title": "Iron",
+    "aliases": [
+      "Fe"
+    ],
+    "category": "Mineral",
+    "status": "nutrient",
+    "statusLabel": "Mineral Support",
+    "metaDescription": "Iron guide with evidence-linked intake context, safety limits, tracking cues, and provider questions.",
+    "heroSummary": "Iron guidance is educational and should be individualized with labs, renal/cardiac context, and clinician input.",
+    "dosingSection": {
+      "overview": "Use lab status, dietary intake, kidney function, and indication to individualize iron dosing strategy. [C1]",
+      "protocolPatterns": [
+        "Start with conservative supplementation ranges when clinically appropriate, then adjust using objective labs. [C1]",
+        "Account for interactions with current medications, thyroid/renal status, and gastrointestinal tolerance. [C2]"
+      ],
+      "monitoringWindows": [
+        "Define recheck intervals before starting supplementation so adjustments are data-guided. [C1]",
+        "Track symptom trend plus objective biomarkers to avoid long, unverified high-dose exposure. [C3]"
+      ]
+    },
+    "trackingSignals": [
+      "Intake consistency and co-administered supplement timing.",
+      "Symptom trends tied to deficiency or excess risk windows.",
+      "Relevant lab checkpoints and clinician follow-up dates."
+    ],
+    "safetyFlags": [
+      "High-dose nutrient plans can still cause toxicity or interaction risk and require lab-guided follow-up.",
+      "Coordinate with current medications (for example thyroid, anticoagulant, or renal regimens).",
+      "Escalate signs of overload, deficiency progression, or unexpected neurologic/cardiac symptoms."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Iron in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Iron: NIH ODS health professional fact sheet",
+        "url": "https://ods.od.nih.gov/factsheets/Iron-HealthProfessional/",
+        "sourceType": "NIH ODS",
+        "publisher": "National Institutes of Health",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Iron: MedlinePlus evidence and safety context",
+        "url": "https://medlineplus.gov/?query=Iron",
+        "sourceType": "MedlinePlus",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Iron: PubMed clinical reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Iron+supplementation+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "l-carnitine",
+    "title": "L-Carnitine",
+    "aliases": [
+      "Levocarnitine"
+    ],
+    "category": "Amino Acid",
+    "status": "support",
+    "statusLabel": "Supportive Therapy",
+    "metaDescription": "L-Carnitine guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. L-Carnitine is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Injectable support use commonly ranges from 500-2000 mg daily or several times weekly. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Compounded/supportive products can vary by formulation and concentration.",
+      "Verify storage, sterility, and route-specific administration safety before use.",
+      "Escalate persistent injection-site reactions, systemic symptoms, or intolerance."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for L-Carnitine in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "L-Carnitine: FDA/openFDA labeling and safety records",
+        "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:L-Carnitine&limit=1",
+        "sourceType": "FDA API",
+        "publisher": "U.S. Food and Drug Administration",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "L-Carnitine: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=L-Carnitine",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "L-Carnitine: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=L-Carnitine",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "L-Carnitine: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=L-Carnitine+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "liraglutide",
+    "title": "Liraglutide",
+    "aliases": [
+      "Victoza",
+      "Saxenda"
+    ],
+    "category": "GLP-1",
+    "status": "approved",
+    "statusLabel": "Approved",
+    "metaDescription": "Liraglutide guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes labeled-use context and practical tracking priorities for clinician discussions. Liraglutide is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Label titration usually starts at 0.6 mg daily and steps to 1.2, 1.8, or 3.0 mg by indication. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Weekly adherence with exact injection-day drift tracking.",
+      "Nausea, reflux, bowel-pattern, and meal-size tolerance logs.",
+      "Weight trend slope and appetite-return timing across weekly curve."
+    ],
+    "safetyFlags": [
+      "Escalate severe GI symptoms, dehydration, persistent vomiting, or signs of allergic reaction immediately.",
+      "Do not change dose frequency or amount without licensed clinician direction.",
+      "Confirm contraindications, interactions, and renal/hepatic considerations before protocol changes."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Liraglutide in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Liraglutide: FDA/openFDA labeling and safety records",
+        "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:Liraglutide&limit=1",
+        "sourceType": "FDA API",
+        "publisher": "U.S. Food and Drug Administration",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Liraglutide: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Liraglutide",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Liraglutide: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Liraglutide",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Liraglutide: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Liraglutide+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "lixisenatide",
+    "title": "Lixisenatide",
+    "aliases": [
+      "Adlyxin",
+      "Lyxumia"
+    ],
+    "category": "GLP-1",
+    "status": "approved",
+    "statusLabel": "Approved",
+    "metaDescription": "Lixisenatide guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes labeled-use context and practical tracking priorities for clinician discussions. Lixisenatide is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Labeled dosing commonly starts at 10 mcg daily for 14 days then increases to 20 mcg daily. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Weekly adherence with exact injection-day drift tracking.",
+      "Nausea, reflux, bowel-pattern, and meal-size tolerance logs.",
+      "Weight trend slope and appetite-return timing across weekly curve."
+    ],
+    "safetyFlags": [
+      "Escalate severe GI symptoms, dehydration, persistent vomiting, or signs of allergic reaction immediately.",
+      "Do not change dose frequency or amount without licensed clinician direction.",
+      "Confirm contraindications, interactions, and renal/hepatic considerations before protocol changes."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Lixisenatide in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Lixisenatide: FDA/openFDA labeling and safety records",
+        "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:Lixisenatide&limit=1",
+        "sourceType": "FDA API",
+        "publisher": "U.S. Food and Drug Administration",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Lixisenatide: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Lixisenatide",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Lixisenatide: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Lixisenatide",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Lixisenatide: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Lixisenatide+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "magnesium",
+    "title": "Magnesium",
+    "aliases": [
+      "Mg"
+    ],
+    "category": "Mineral",
+    "status": "nutrient",
+    "statusLabel": "Mineral Support",
+    "metaDescription": "Magnesium guide with evidence-linked intake context, safety limits, tracking cues, and provider questions.",
+    "heroSummary": "Magnesium guidance is educational and should be individualized with labs, renal/cardiac context, and clinician input.",
+    "dosingSection": {
+      "overview": "Use lab status, dietary intake, kidney function, and indication to individualize magnesium dosing strategy. [C1]",
+      "protocolPatterns": [
+        "Start with conservative supplementation ranges when clinically appropriate, then adjust using objective labs. [C1]",
+        "Account for interactions with current medications, thyroid/renal status, and gastrointestinal tolerance. [C2]"
+      ],
+      "monitoringWindows": [
+        "Define recheck intervals before starting supplementation so adjustments are data-guided. [C1]",
+        "Track symptom trend plus objective biomarkers to avoid long, unverified high-dose exposure. [C3]"
+      ]
+    },
+    "trackingSignals": [
+      "Intake consistency and co-administered supplement timing.",
+      "Symptom trends tied to deficiency or excess risk windows.",
+      "Relevant lab checkpoints and clinician follow-up dates."
+    ],
+    "safetyFlags": [
+      "High-dose nutrient plans can still cause toxicity or interaction risk and require lab-guided follow-up.",
+      "Coordinate with current medications (for example thyroid, anticoagulant, or renal regimens).",
+      "Escalate signs of overload, deficiency progression, or unexpected neurologic/cardiac symptoms."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Magnesium in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Magnesium: NIH ODS health professional fact sheet",
+        "url": "https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/",
+        "sourceType": "NIH ODS",
+        "publisher": "National Institutes of Health",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Magnesium: MedlinePlus evidence and safety context",
+        "url": "https://medlineplus.gov/?query=Magnesium",
+        "sourceType": "MedlinePlus",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Magnesium: PubMed clinical reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Magnesium+supplementation+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "manganese",
+    "title": "Manganese",
+    "aliases": [
+      "Mn"
+    ],
+    "category": "Mineral",
+    "status": "nutrient",
+    "statusLabel": "Mineral Support",
+    "metaDescription": "Manganese guide with evidence-linked intake context, safety limits, tracking cues, and provider questions.",
+    "heroSummary": "Manganese guidance is educational and should be individualized with labs, renal/cardiac context, and clinician input.",
+    "dosingSection": {
+      "overview": "Use lab status, dietary intake, kidney function, and indication to individualize manganese dosing strategy. [C1]",
+      "protocolPatterns": [
+        "Start with conservative supplementation ranges when clinically appropriate, then adjust using objective labs. [C1]",
+        "Account for interactions with current medications, thyroid/renal status, and gastrointestinal tolerance. [C2]"
+      ],
+      "monitoringWindows": [
+        "Define recheck intervals before starting supplementation so adjustments are data-guided. [C1]",
+        "Track symptom trend plus objective biomarkers to avoid long, unverified high-dose exposure. [C3]"
+      ]
+    },
+    "trackingSignals": [
+      "Intake consistency and co-administered supplement timing.",
+      "Symptom trends tied to deficiency or excess risk windows.",
+      "Relevant lab checkpoints and clinician follow-up dates."
+    ],
+    "safetyFlags": [
+      "High-dose nutrient plans can still cause toxicity or interaction risk and require lab-guided follow-up.",
+      "Coordinate with current medications (for example thyroid, anticoagulant, or renal regimens).",
+      "Escalate signs of overload, deficiency progression, or unexpected neurologic/cardiac symptoms."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Manganese in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Manganese: NIH ODS health professional fact sheet",
+        "url": "https://ods.od.nih.gov/factsheets/Manganese-HealthProfessional/",
+        "sourceType": "NIH ODS",
+        "publisher": "National Institutes of Health",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Manganese: MedlinePlus evidence and safety context",
+        "url": "https://medlineplus.gov/?query=Manganese",
+        "sourceType": "MedlinePlus",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Manganese: PubMed clinical reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Manganese+supplementation+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "mazdutide",
+    "title": "Mazdutide",
+    "aliases": [
+      "IBI362"
+    ],
+    "category": "Experimental",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "Mazdutide guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. Mazdutide is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Investigational weekly regimens use staged escalation protocols with trial-specific maximum doses. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Mazdutide in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Mazdutide: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=Mazdutide",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Mazdutide: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Mazdutide",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Mazdutide: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Mazdutide",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Mazdutide: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Mazdutide+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "melanotan-2",
+    "title": "Melanotan II",
+    "aliases": [
+      "MT2"
+    ],
+    "category": "Other Peptide",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "Melanotan II guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. Melanotan II is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Reported protocols often begin around 250 mcg and titrate toward 500-1000 mcg based on tolerance. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Melanotan II in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Melanotan II: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=Melanotan%20II",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Melanotan II: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Melanotan%20II",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Melanotan II: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Melanotan%20II",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Melanotan II: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Melanotan%20II+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "metformin",
+    "title": "Metformin",
+    "aliases": [
+      "Glucophage",
+      "Glumetza"
+    ],
+    "category": "Metformin",
+    "status": "approved",
+    "statusLabel": "Approved",
+    "metaDescription": "Metformin guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes labeled-use context and practical tracking priorities for clinician discussions. Metformin is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Typical clinical pathways start at 500 mg once daily and titrate in 500 mg increments toward 1500-2000 mg/day. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Meal timing versus GI symptoms and adherence.",
+      "Fasting glucose context with consistent measurement windows.",
+      "Renal-lab follow-up reminders and tolerance over titration windows."
+    ],
+    "safetyFlags": [
+      "Escalate severe GI symptoms, dehydration, persistent vomiting, or signs of allergic reaction immediately.",
+      "Do not change dose frequency or amount without licensed clinician direction.",
+      "Confirm contraindications, interactions, and renal/hepatic considerations before protocol changes."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Metformin in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Metformin: FDA/openFDA labeling and safety records",
+        "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:Metformin&limit=1",
+        "sourceType": "FDA API",
+        "publisher": "U.S. Food and Drug Administration",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Metformin: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Metformin",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Metformin: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Metformin",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Metformin: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Metformin+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "mic",
+    "title": "MIC Injection",
+    "aliases": [
+      "Lipotropic Injection",
+      "Lipo-B"
+    ],
+    "category": "Weight Loss Blend",
+    "status": "support",
+    "statusLabel": "Supportive Therapy",
+    "metaDescription": "MIC Injection guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. MIC Injection is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Clinic programs commonly use 1-2 mL weekly or twice weekly depending on concentration and tolerability. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Compounded/supportive products can vary by formulation and concentration.",
+      "Verify storage, sterility, and route-specific administration safety before use.",
+      "Escalate persistent injection-site reactions, systemic symptoms, or intolerance."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for MIC Injection in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "MIC Injection: FDA/openFDA labeling and safety records",
+        "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:MIC%20Injection&limit=1",
+        "sourceType": "FDA API",
+        "publisher": "U.S. Food and Drug Administration",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "MIC Injection: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=MIC%20Injection",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "MIC Injection: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=MIC%20Injection",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "MIC Injection: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=MIC%20Injection+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "molybdenum",
+    "title": "Molybdenum",
+    "aliases": [
+      "Mo"
+    ],
+    "category": "Mineral",
+    "status": "nutrient",
+    "statusLabel": "Mineral Support",
+    "metaDescription": "Molybdenum guide with evidence-linked intake context, safety limits, tracking cues, and provider questions.",
+    "heroSummary": "Molybdenum guidance is educational and should be individualized with labs, renal/cardiac context, and clinician input.",
+    "dosingSection": {
+      "overview": "Use lab status, dietary intake, kidney function, and indication to individualize molybdenum dosing strategy. [C1]",
+      "protocolPatterns": [
+        "Start with conservative supplementation ranges when clinically appropriate, then adjust using objective labs. [C1]",
+        "Account for interactions with current medications, thyroid/renal status, and gastrointestinal tolerance. [C2]"
+      ],
+      "monitoringWindows": [
+        "Define recheck intervals before starting supplementation so adjustments are data-guided. [C1]",
+        "Track symptom trend plus objective biomarkers to avoid long, unverified high-dose exposure. [C3]"
+      ]
+    },
+    "trackingSignals": [
+      "Intake consistency and co-administered supplement timing.",
+      "Symptom trends tied to deficiency or excess risk windows.",
+      "Relevant lab checkpoints and clinician follow-up dates."
+    ],
+    "safetyFlags": [
+      "High-dose nutrient plans can still cause toxicity or interaction risk and require lab-guided follow-up.",
+      "Coordinate with current medications (for example thyroid, anticoagulant, or renal regimens).",
+      "Escalate signs of overload, deficiency progression, or unexpected neurologic/cardiac symptoms."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Molybdenum in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Molybdenum: NIH ODS health professional fact sheet",
+        "url": "https://ods.od.nih.gov/factsheets/Molybdenum-HealthProfessional/",
+        "sourceType": "NIH ODS",
+        "publisher": "National Institutes of Health",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Molybdenum: MedlinePlus evidence and safety context",
+        "url": "https://medlineplus.gov/?query=Molybdenum",
+        "sourceType": "MedlinePlus",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Molybdenum: PubMed clinical reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Molybdenum+supplementation+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "nad-plus",
+    "title": "NAD+",
+    "aliases": [
+      "Nicotinamide Adenine Dinucleotide",
+      "NAD"
+    ],
+    "category": "Coenzyme",
+    "status": "support",
+    "statusLabel": "Supportive Therapy",
+    "metaDescription": "NAD+ guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. NAD+ is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Support protocols often use 50-200 mg per injection one to three times weekly, with slow administration emphasized. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Compounded/supportive products can vary by formulation and concentration.",
+      "Verify storage, sterility, and route-specific administration safety before use.",
+      "Escalate persistent injection-site reactions, systemic symptoms, or intolerance."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for NAD+ in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "NAD+: FDA/openFDA labeling and safety records",
+        "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:NAD%2B&limit=1",
+        "sourceType": "FDA API",
+        "publisher": "U.S. Food and Drug Administration",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "NAD+: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=NAD%2B",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "NAD+: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=NAD%2B",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "NAD+: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=NAD%2B+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "orforglipron",
+    "title": "Orforglipron",
+    "aliases": [
+      "LY3502970"
+    ],
+    "category": "Experimental",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "Orforglipron guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. Orforglipron is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Investigational oral regimens in development use daily fixed-dose schedules with protocol-based escalation. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Orforglipron in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Orforglipron: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=Orforglipron",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Orforglipron: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Orforglipron",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Orforglipron: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Orforglipron",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Orforglipron: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Orforglipron+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "phosphorus",
+    "title": "Phosphorus",
+    "aliases": [
+      "P"
+    ],
+    "category": "Mineral",
+    "status": "nutrient",
+    "statusLabel": "Mineral Support",
+    "metaDescription": "Phosphorus guide with evidence-linked intake context, safety limits, tracking cues, and provider questions.",
+    "heroSummary": "Phosphorus guidance is educational and should be individualized with labs, renal/cardiac context, and clinician input.",
+    "dosingSection": {
+      "overview": "Use lab status, dietary intake, kidney function, and indication to individualize phosphorus dosing strategy. [C1]",
+      "protocolPatterns": [
+        "Start with conservative supplementation ranges when clinically appropriate, then adjust using objective labs. [C1]",
+        "Account for interactions with current medications, thyroid/renal status, and gastrointestinal tolerance. [C2]"
+      ],
+      "monitoringWindows": [
+        "Define recheck intervals before starting supplementation so adjustments are data-guided. [C1]",
+        "Track symptom trend plus objective biomarkers to avoid long, unverified high-dose exposure. [C3]"
+      ]
+    },
+    "trackingSignals": [
+      "Intake consistency and co-administered supplement timing.",
+      "Symptom trends tied to deficiency or excess risk windows.",
+      "Relevant lab checkpoints and clinician follow-up dates."
+    ],
+    "safetyFlags": [
+      "High-dose nutrient plans can still cause toxicity or interaction risk and require lab-guided follow-up.",
+      "Coordinate with current medications (for example thyroid, anticoagulant, or renal regimens).",
+      "Escalate signs of overload, deficiency progression, or unexpected neurologic/cardiac symptoms."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Phosphorus in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Phosphorus: NIH ODS health professional fact sheet",
+        "url": "https://ods.od.nih.gov/factsheets/Phosphorus-HealthProfessional/",
+        "sourceType": "NIH ODS",
+        "publisher": "National Institutes of Health",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Phosphorus: MedlinePlus evidence and safety context",
+        "url": "https://medlineplus.gov/?query=Phosphorus",
+        "sourceType": "MedlinePlus",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Phosphorus: PubMed clinical reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Phosphorus+supplementation+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "potassium",
+    "title": "Potassium",
+    "aliases": [
+      "K"
+    ],
+    "category": "Mineral",
+    "status": "nutrient",
+    "statusLabel": "Mineral Support",
+    "metaDescription": "Potassium guide with evidence-linked intake context, safety limits, tracking cues, and provider questions.",
+    "heroSummary": "Potassium guidance is educational and should be individualized with labs, renal/cardiac context, and clinician input.",
+    "dosingSection": {
+      "overview": "Use lab status, dietary intake, kidney function, and indication to individualize potassium dosing strategy. [C1]",
+      "protocolPatterns": [
+        "Start with conservative supplementation ranges when clinically appropriate, then adjust using objective labs. [C1]",
+        "Account for interactions with current medications, thyroid/renal status, and gastrointestinal tolerance. [C2]"
+      ],
+      "monitoringWindows": [
+        "Define recheck intervals before starting supplementation so adjustments are data-guided. [C1]",
+        "Track symptom trend plus objective biomarkers to avoid long, unverified high-dose exposure. [C3]"
+      ]
+    },
+    "trackingSignals": [
+      "Intake consistency and co-administered supplement timing.",
+      "Symptom trends tied to deficiency or excess risk windows.",
+      "Relevant lab checkpoints and clinician follow-up dates."
+    ],
+    "safetyFlags": [
+      "High-dose nutrient plans can still cause toxicity or interaction risk and require lab-guided follow-up.",
+      "Coordinate with current medications (for example thyroid, anticoagulant, or renal regimens).",
+      "Escalate signs of overload, deficiency progression, or unexpected neurologic/cardiac symptoms."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Potassium in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Potassium: NIH ODS health professional fact sheet",
+        "url": "https://ods.od.nih.gov/factsheets/Potassium-HealthProfessional/",
+        "sourceType": "NIH ODS",
+        "publisher": "National Institutes of Health",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Potassium: MedlinePlus evidence and safety context",
+        "url": "https://medlineplus.gov/?query=Potassium",
+        "sourceType": "MedlinePlus",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Potassium: PubMed clinical reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Potassium+supplementation+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "pt-141",
+    "title": "PT-141 (Bremelanotide)",
+    "aliases": [
+      "Vyleesi"
+    ],
+    "category": "Other Peptide",
+    "status": "approved",
+    "statusLabel": "Approved",
+    "metaDescription": "PT-141 (Bremelanotide) guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes labeled-use context and practical tracking priorities for clinician discussions. PT-141 (Bremelanotide) is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Approved HSDD labeling uses on-demand administration with limits on dose frequency per 24-hour and monthly windows. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Escalate severe GI symptoms, dehydration, persistent vomiting, or signs of allergic reaction immediately.",
+      "Do not change dose frequency or amount without licensed clinician direction.",
+      "Confirm contraindications, interactions, and renal/hepatic considerations before protocol changes."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for PT-141 (Bremelanotide) in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "PT-141 (Bremelanotide): FDA/openFDA labeling and safety records",
+        "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=BasicSearch.process",
+        "sourceType": "FDA API",
+        "publisher": "U.S. Food and Drug Administration",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "PT-141 (Bremelanotide): DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=PT-141",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "PT-141 (Bremelanotide): Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=PT-141",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "PT-141 (Bremelanotide): PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=PT-141+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "retatrutide",
+    "title": "Retatrutide",
+    "aliases": [
+      "LY3437943"
+    ],
+    "category": "Experimental",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "Retatrutide guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. Retatrutide is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Phase studies use weekly dose-escalation cohorts with protocol-defined ceilings and adverse-event monitoring. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Retatrutide in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Retatrutide: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=Retatrutide",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Retatrutide: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Retatrutide",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Retatrutide: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Retatrutide",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Retatrutide: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Retatrutide+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "selank",
+    "title": "Selank",
+    "aliases": [
+      "Tuftsin Analog"
+    ],
+    "category": "Nootropic Peptide",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "Selank guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. Selank is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Research-use schedules commonly report 250-750 mcg once or twice daily by route. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Selank in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Selank: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=Selank",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Selank: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Selank",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Selank: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Selank",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Selank: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Selank+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "selenium",
+    "title": "Selenium",
+    "aliases": [
+      "Se"
+    ],
+    "category": "Mineral",
+    "status": "nutrient",
+    "statusLabel": "Mineral Support",
+    "metaDescription": "Selenium guide with evidence-linked intake context, safety limits, tracking cues, and provider questions.",
+    "heroSummary": "Selenium guidance is educational and should be individualized with labs, renal/cardiac context, and clinician input.",
+    "dosingSection": {
+      "overview": "Use lab status, dietary intake, kidney function, and indication to individualize selenium dosing strategy. [C1]",
+      "protocolPatterns": [
+        "Start with conservative supplementation ranges when clinically appropriate, then adjust using objective labs. [C1]",
+        "Account for interactions with current medications, thyroid/renal status, and gastrointestinal tolerance. [C2]"
+      ],
+      "monitoringWindows": [
+        "Define recheck intervals before starting supplementation so adjustments are data-guided. [C1]",
+        "Track symptom trend plus objective biomarkers to avoid long, unverified high-dose exposure. [C3]"
+      ]
+    },
+    "trackingSignals": [
+      "Intake consistency and co-administered supplement timing.",
+      "Symptom trends tied to deficiency or excess risk windows.",
+      "Relevant lab checkpoints and clinician follow-up dates."
+    ],
+    "safetyFlags": [
+      "High-dose nutrient plans can still cause toxicity or interaction risk and require lab-guided follow-up.",
+      "Coordinate with current medications (for example thyroid, anticoagulant, or renal regimens).",
+      "Escalate signs of overload, deficiency progression, or unexpected neurologic/cardiac symptoms."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Selenium in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Selenium: NIH ODS health professional fact sheet",
+        "url": "https://ods.od.nih.gov/factsheets/Selenium-HealthProfessional/",
+        "sourceType": "NIH ODS",
+        "publisher": "National Institutes of Health",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Selenium: MedlinePlus evidence and safety context",
+        "url": "https://medlineplus.gov/?query=Selenium",
+        "sourceType": "MedlinePlus",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Selenium: PubMed clinical reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Selenium+supplementation+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "semaglutide",
+    "title": "Semaglutide",
+    "aliases": [
+      "Ozempic",
+      "Wegovy",
+      "Rybelsus"
+    ],
+    "category": "GLP-1",
+    "status": "approved",
+    "statusLabel": "Approved",
+    "metaDescription": "Semaglutide guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes labeled-use context and practical tracking priorities for clinician discussions. Semaglutide is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Label-based titration generally starts at 0.25 mg weekly and increases in staged 4-week intervals up to product-specific targets. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Weekly adherence with exact injection-day drift tracking.",
+      "Nausea, reflux, bowel-pattern, and meal-size tolerance logs.",
+      "Weight trend slope and appetite-return timing across weekly curve."
+    ],
+    "safetyFlags": [
+      "Escalate severe GI symptoms, dehydration, persistent vomiting, or signs of allergic reaction immediately.",
+      "Do not change dose frequency or amount without licensed clinician direction.",
+      "Confirm contraindications, interactions, and renal/hepatic considerations before protocol changes."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Semaglutide in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Semaglutide: FDA/openFDA labeling and safety records",
+        "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:Semaglutide&limit=1",
+        "sourceType": "FDA API",
+        "publisher": "U.S. Food and Drug Administration",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Semaglutide: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Semaglutide",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Semaglutide: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Semaglutide",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Semaglutide: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Semaglutide+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "sermorelin",
+    "title": "Sermorelin",
+    "aliases": [
+      "GHRH 1-29"
+    ],
+    "category": "GH Secretagogue",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "Sermorelin guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. Sermorelin is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Common legacy protocols cite 200-1000 mcg nightly with cycle planning and response monitoring. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Sermorelin in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Sermorelin: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=Sermorelin",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Sermorelin: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Sermorelin",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Sermorelin: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Sermorelin",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Sermorelin: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Sermorelin+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "sodium",
+    "title": "Sodium",
+    "aliases": [
+      "Na"
+    ],
+    "category": "Mineral",
+    "status": "nutrient",
+    "statusLabel": "Mineral Support",
+    "metaDescription": "Sodium guide with evidence-linked intake context, safety limits, tracking cues, and provider questions.",
+    "heroSummary": "Sodium guidance is educational and should be individualized with labs, renal/cardiac context, and clinician input.",
+    "dosingSection": {
+      "overview": "Use lab status, dietary intake, kidney function, and indication to individualize sodium dosing strategy. [C1]",
+      "protocolPatterns": [
+        "Start with conservative supplementation ranges when clinically appropriate, then adjust using objective labs. [C1]",
+        "Account for interactions with current medications, thyroid/renal status, and gastrointestinal tolerance. [C2]"
+      ],
+      "monitoringWindows": [
+        "Define recheck intervals before starting supplementation so adjustments are data-guided. [C1]",
+        "Track symptom trend plus objective biomarkers to avoid long, unverified high-dose exposure. [C3]"
+      ]
+    },
+    "trackingSignals": [
+      "Intake consistency and co-administered supplement timing.",
+      "Symptom trends tied to deficiency or excess risk windows.",
+      "Relevant lab checkpoints and clinician follow-up dates."
+    ],
+    "safetyFlags": [
+      "High-dose nutrient plans can still cause toxicity or interaction risk and require lab-guided follow-up.",
+      "Coordinate with current medications (for example thyroid, anticoagulant, or renal regimens).",
+      "Escalate signs of overload, deficiency progression, or unexpected neurologic/cardiac symptoms."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Sodium in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Sodium: NIH ODS health professional fact sheet",
+        "url": "https://ods.od.nih.gov/factsheets/list-all/",
+        "sourceType": "NIH ODS",
+        "publisher": "National Institutes of Health",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Sodium: MedlinePlus evidence and safety context",
+        "url": "https://medlineplus.gov/?query=Sodium",
+        "sourceType": "MedlinePlus",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Sodium: PubMed clinical reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Sodium+supplementation+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "survodutide",
+    "title": "Survodutide",
+    "aliases": [
+      "BI 456906"
+    ],
+    "category": "Experimental",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "Survodutide guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. Survodutide is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Investigational schedules are weekly and follow trial-defined titration to reduce GI adverse effects. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Survodutide in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Survodutide: Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=Survodutide",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Survodutide: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Survodutide",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Survodutide: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Survodutide",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Survodutide: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Survodutide+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "tb-500",
+    "title": "TB-500 (Thymosin Beta-4)",
+    "aliases": [
+      "Thymosin Beta-4"
+    ],
+    "category": "Healing Peptide",
+    "status": "experimental",
+    "statusLabel": "Experimental",
+    "metaDescription": "TB-500 (Thymosin Beta-4) guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. TB-500 (Thymosin Beta-4) is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Common research-use narratives describe loading phases around 2-10 mg weekly followed by lower-maintenance intervals. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Investigational status means efficacy/safety uncertainty can be significant and rapidly evolving.",
+      "Stop self-directed escalation when unexpected adverse effects occur and contact a clinician promptly.",
+      "Avoid stacking multiple experimental compounds without explicit medical supervision."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for TB-500 (Thymosin Beta-4) in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?",
+      "What is the rationale for choosing this option over approved alternatives in my care plan?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "TB-500 (Thymosin Beta-4): Investigational program registry",
+        "url": "https://clinicaltrials.gov/search?term=TB-500",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "TB-500 (Thymosin Beta-4): DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=TB-500",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "TB-500 (Thymosin Beta-4): Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=TB-500",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "TB-500 (Thymosin Beta-4): PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=TB-500+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "tesamorelin",
+    "title": "Tesamorelin",
+    "aliases": [
+      "Egrifta"
+    ],
+    "category": "GH Secretagogue",
+    "status": "approved",
+    "statusLabel": "Approved",
+    "metaDescription": "Tesamorelin guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes labeled-use context and practical tracking priorities for clinician discussions. Tesamorelin is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Approved HIV-lipodystrophy labeling commonly uses 2 mg subcutaneous daily administration. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose timing consistency and protocol adherence over full cycles.",
+      "Target outcome notes with date-stamped objective/subjective markers.",
+      "Adverse-effect timeline entries with severity and resolution notes."
+    ],
+    "safetyFlags": [
+      "Escalate severe GI symptoms, dehydration, persistent vomiting, or signs of allergic reaction immediately.",
+      "Do not change dose frequency or amount without licensed clinician direction.",
+      "Confirm contraindications, interactions, and renal/hepatic considerations before protocol changes."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Tesamorelin in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Tesamorelin: FDA/openFDA labeling and safety records",
+        "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:Tesamorelin&limit=1",
+        "sourceType": "FDA API",
+        "publisher": "U.S. Food and Drug Administration",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Tesamorelin: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Tesamorelin",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Tesamorelin: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Tesamorelin",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Tesamorelin: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Tesamorelin+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "tirzepatide",
+    "title": "Tirzepatide",
+    "aliases": [
+      "Mounjaro",
+      "Zepbound"
+    ],
+    "category": "GIP/GLP-1",
+    "status": "approved",
+    "statusLabel": "Approved",
+    "metaDescription": "Tirzepatide guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes labeled-use context and practical tracking priorities for clinician discussions. Tirzepatide is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Label pathways start at 2.5 mg weekly and escalate stepwise to 5, 7.5, 10, 12.5, and 15 mg as tolerated. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Dose-day consistency and any delayed/early administration changes.",
+      "Energy, appetite suppression, and GI tolerance by day since dose.",
+      "Weight and waist trend snapshots on consistent weekly cadence."
+    ],
+    "safetyFlags": [
+      "Escalate severe GI symptoms, dehydration, persistent vomiting, or signs of allergic reaction immediately.",
+      "Do not change dose frequency or amount without licensed clinician direction.",
+      "Confirm contraindications, interactions, and renal/hepatic considerations before protocol changes."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Tirzepatide in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Tirzepatide: FDA/openFDA labeling and safety records",
+        "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:Tirzepatide&limit=1",
+        "sourceType": "FDA API",
+        "publisher": "U.S. Food and Drug Administration",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Tirzepatide: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Tirzepatide",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Tirzepatide: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Tirzepatide",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Tirzepatide: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Tirzepatide+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "vitamin-d3",
+    "title": "Vitamin D3",
+    "aliases": [
+      "Cholecalciferol"
+    ],
+    "category": "Vitamin",
+    "status": "nutrient",
+    "statusLabel": "Nutrient Support",
+    "metaDescription": "Vitamin D3 guide for dosing context, tracking priorities, safety red flags, and provider discussion prompts in ShotClock.",
+    "heroSummary": "This guide summarizes investigational or non-standard context and prioritizes conservative risk framing for clinician review. Vitamin D3 is presented as educational content only and not a prescription directive.",
+    "dosingSection": {
+      "overview": "Common replacement plans range from 1000-5000 IU daily, with higher short-course repletion plans based on labs. [C1]",
+      "protocolPatterns": [
+        "Dose escalation or schedule changes should be tied to objective tolerance logs and clinician checkpoints. [C2]",
+        "When protocols involve cycles or stacks, document start/stop dates and decision criteria before changes. [C3]"
+      ],
+      "monitoringWindows": [
+        "Log weekly trend checkpoints at the same day/time to reduce interpretation noise. [C2]",
+        "Record adverse-effect onset, peak, and resolution timing to support safer follow-up decisions. [C4]"
+      ]
+    },
+    "trackingSignals": [
+      "Administration consistency and lab follow-up dates.",
+      "Energy, neurologic, or musculoskeletal symptom trends over weeks.",
+      "Route tolerance and adherence barriers."
+    ],
+    "safetyFlags": [
+      "High-dose nutrient plans can still cause toxicity or interaction risk and require lab-guided follow-up.",
+      "Coordinate with current medications (for example thyroid, anticoagulant, or renal regimens).",
+      "Escalate signs of overload, deficiency progression, or unexpected neurologic/cardiac symptoms."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Vitamin D3 in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Vitamin D3: FDA/openFDA labeling and safety records",
+        "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:Vitamin%20D3&limit=1",
+        "sourceType": "FDA API",
+        "publisher": "U.S. Food and Drug Administration",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Vitamin D3: DailyMed labeling index",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Vitamin%20D3",
+        "sourceType": "DailyMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Vitamin D3: Clinical trials registry",
+        "url": "https://clinicaltrials.gov/search?term=Vitamin%20D3",
+        "sourceType": "ClinicalTrials.gov",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C4",
+        "title": "Vitamin D3: PubMed evidence reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Vitamin%20D3+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "zinc",
+    "title": "Zinc",
+    "aliases": [
+      "Zn"
+    ],
+    "category": "Mineral",
+    "status": "nutrient",
+    "statusLabel": "Mineral Support",
+    "metaDescription": "Zinc guide with evidence-linked intake context, safety limits, tracking cues, and provider questions.",
+    "heroSummary": "Zinc guidance is educational and should be individualized with labs, renal/cardiac context, and clinician input.",
+    "dosingSection": {
+      "overview": "Use lab status, dietary intake, kidney function, and indication to individualize zinc dosing strategy. [C1]",
+      "protocolPatterns": [
+        "Start with conservative supplementation ranges when clinically appropriate, then adjust using objective labs. [C1]",
+        "Account for interactions with current medications, thyroid/renal status, and gastrointestinal tolerance. [C2]"
+      ],
+      "monitoringWindows": [
+        "Define recheck intervals before starting supplementation so adjustments are data-guided. [C1]",
+        "Track symptom trend plus objective biomarkers to avoid long, unverified high-dose exposure. [C3]"
+      ]
+    },
+    "trackingSignals": [
+      "Intake consistency and co-administered supplement timing.",
+      "Symptom trends tied to deficiency or excess risk windows.",
+      "Relevant lab checkpoints and clinician follow-up dates."
+    ],
+    "safetyFlags": [
+      "High-dose nutrient plans can still cause toxicity or interaction risk and require lab-guided follow-up.",
+      "Coordinate with current medications (for example thyroid, anticoagulant, or renal regimens).",
+      "Escalate signs of overload, deficiency progression, or unexpected neurologic/cardiac symptoms."
+    ],
+    "providerQuestions": [
+      "What outcome targets should define success or failure for Zinc in my case?",
+      "Which baseline and follow-up labs should be scheduled, and at what intervals?",
+      "What side-effect thresholds should trigger same-day clinician contact versus routine follow-up?"
+    ],
+    "citations": [
+      {
+        "id": "C1",
+        "title": "Zinc: NIH ODS health professional fact sheet",
+        "url": "https://ods.od.nih.gov/factsheets/Zinc-HealthProfessional/",
+        "sourceType": "NIH ODS",
+        "publisher": "National Institutes of Health",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C2",
+        "title": "Zinc: MedlinePlus evidence and safety context",
+        "url": "https://medlineplus.gov/?query=Zinc",
+        "sourceType": "MedlinePlus",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      },
+      {
+        "id": "C3",
+        "title": "Zinc: PubMed clinical reviews",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Zinc+supplementation+review",
+        "sourceType": "PubMed",
+        "publisher": "U.S. National Library of Medicine",
+        "publishedDate": "2025-01-01",
+        "accessedDate": "2026-02-22"
+      }
+    ],
+    "lastReviewed": "2026-02-22",
+    "version": "1.0.0"
+  }
+]

@@ -925,3 +925,349 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Guide pages */
+.guide-content,
+.updates-content {
+  padding: var(--space-8) 0;
+}
+
+.guide-container,
+.updates-container {
+  max-width: 980px;
+}
+
+.breadcrumb {
+  align-items: center;
+  color: var(--text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.breadcrumb a {
+  color: #7fc0ff;
+}
+
+.breadcrumb a:hover {
+  color: #abd9ff;
+}
+
+.guide-hero {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-6);
+  padding: var(--space-6);
+}
+
+.guide-head-meta {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.guide-date {
+  color: var(--text-muted);
+  font-size: 0.86rem;
+}
+
+.status-badge {
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  display: inline-flex;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 5px 10px;
+  text-transform: uppercase;
+}
+
+.status-category {
+  background: rgba(77, 163, 255, 0.12);
+  border-color: rgba(77, 163, 255, 0.32);
+  color: #7fc0ff;
+}
+
+.status-approved {
+  background: rgba(61, 220, 132, 0.12);
+  border-color: rgba(61, 220, 132, 0.36);
+  color: #83eab1;
+}
+
+.status-experimental,
+.status-discontinued,
+.status-regional {
+  background: rgba(255, 92, 92, 0.12);
+  border-color: rgba(255, 92, 92, 0.36);
+  color: #ffabab;
+}
+
+.status-nutrient,
+.status-support {
+  background: rgba(255, 184, 77, 0.14);
+  border-color: rgba(255, 184, 77, 0.36);
+  color: #ffd08a;
+}
+
+.guide-aliases {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.guide-layout {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.guide-section {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.guide-section h2 {
+  margin-top: 0;
+}
+
+.warning-box {
+  background: rgba(255, 92, 92, 0.1);
+  border-color: rgba(255, 92, 92, 0.42);
+}
+
+.compliance-box {
+  background: rgba(77, 163, 255, 0.08);
+  border-color: rgba(77, 163, 255, 0.32);
+}
+
+.citation-chip {
+  border: 1px solid rgba(77, 163, 255, 0.45);
+  border-radius: var(--radius-pill);
+  color: #7fc0ff;
+  display: inline-flex;
+  font-size: 0.72rem;
+  line-height: 1;
+  margin-left: 4px;
+  padding: 4px 7px;
+  vertical-align: middle;
+}
+
+.citation-chip:hover {
+  background: rgba(77, 163, 255, 0.18);
+}
+
+.sources-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sources-list li {
+  border-bottom: 1px solid var(--border-soft);
+  margin: 0;
+  padding: var(--space-4) 0;
+}
+
+.sources-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.sources-list a {
+  color: #7fc0ff;
+  word-break: break-all;
+}
+
+.citation-meta {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+/* Directory controls */
+.directory-controls {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-6);
+  padding: var(--space-5);
+}
+
+.directory-label {
+  color: var(--text-primary);
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.guide-search {
+  background: #151d24;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  margin-bottom: var(--space-4);
+  padding: 12px 14px;
+  width: 100%;
+}
+
+.guide-search:focus {
+  border-color: rgba(77, 163, 255, 0.55);
+  box-shadow: 0 0 0 3px rgba(77, 163, 255, 0.2);
+  outline: none;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 8px 12px;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: rgba(77, 163, 255, 0.16);
+  border-color: rgba(77, 163, 255, 0.4);
+  color: var(--text-primary);
+}
+
+.directory-meta {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-top: var(--space-3);
+}
+
+.directory-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  margin-bottom: var(--space-8);
+}
+
+.directory-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  grid-column: span 6;
+  padding: var(--space-5);
+}
+
+.directory-card-head {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.directory-card h3 {
+  margin-bottom: var(--space-3);
+}
+
+.directory-card h3 a {
+  color: var(--text-primary);
+}
+
+.directory-card h3 a:hover {
+  color: #abd9ff;
+}
+
+.directory-card-actions {
+  margin-top: var(--space-4);
+}
+
+/* Updates page and modules */
+.updates-feed,
+.updates-preview-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.update-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.update-card.compact {
+  padding: var(--space-4);
+}
+
+.update-head,
+.module-head {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.update-date {
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  margin: 0;
+}
+
+.update-link {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  color: #7fc0ff;
+  display: inline-flex;
+  font-size: 0.78rem;
+  margin: 0 6px 6px 0;
+  padding: 5px 10px;
+}
+
+.update-link:hover {
+  background: rgba(77, 163, 255, 0.15);
+}
+
+.update-links-inline {
+  margin-bottom: 0;
+}
+
+.module-link {
+  margin-left: auto;
+}
+
+.latest-updates-module {
+  margin-bottom: var(--space-8);
+}
+
+@media (max-width: 900px) {
+  .directory-card {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 760px) {
+  .guide-head-meta,
+  .module-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
+}

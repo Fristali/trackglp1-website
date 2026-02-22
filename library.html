@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Learn Hub - ShotClock</title>
-  <meta name="description" content="ShotClock Learn Hub with quick peptide and GLP-1 explainers plus practical tracking guidance.">
+  <title>Learn Directory - ShotClock</title>
+  <meta name="description" content="Browse dedicated ShotClock guides for peptides, medications, vitamins, and minerals with external citations and tracking-focused context.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -18,6 +18,7 @@
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="library.html" class="active">Learn</a>
+        <a href="updates.html">Updates</a>
         <a href="support.html">Support</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
@@ -27,190 +28,42 @@
 
   <main class="library-content">
     <div class="container">
-      <h1>Learn Hub: Peptides and GLP-1</h1>
+      <h1>Guide Directory: Peptides, Medications, Vitamins, and Minerals</h1>
       <p class="support-intro">
-        If you are new here, start here. This hub is built to help you understand compounds quickly,
-        then track the right things in ShotClock without confusion.
+        Find dedicated pages for each compound, then move into ShotClock with a cleaner tracking plan.
+        Every guide includes dosing context, safety framing, provider questions, and a source list.
       </p>
 
-      <section class="compound-nav" aria-label="Learn categories">
-        <a href="#quick-start" class="btn btn-outline">Quick Start</a>
-        <a href="#glp1" class="btn btn-outline">GLP-1 and GIP/GLP-1</a>
-        <a href="#peptides" class="btn btn-outline">Therapeutic Peptides</a>
-        <a href="#notes" class="btn btn-outline">How We Write Guides</a>
+      <section class="directory-controls" aria-label="Guide search and filter controls">
+        <label for="guide-search" class="directory-label">Search guides</label>
+        <input id="guide-search" class="guide-search" type="search" placeholder="Search by name, alias, or category (e.g., semaglutide, peptide, magnesium)">
+
+        <div class="filter-row" role="group" aria-label="Guide filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="medications">Medications</button>
+          <button class="filter-btn" data-filter="peptides">Peptides</button>
+          <button class="filter-btn" data-filter="support">Support</button>
+          <button class="filter-btn" data-filter="minerals">Minerals</button>
+          <button class="filter-btn" data-filter="experimental">Experimental</button>
+        </div>
+
+        <p class="directory-meta" id="directory-meta">Loading guide directory...</p>
       </section>
 
-      <section id="quick-start" class="compound-section">
-        <h2>Quick Start for New Visitors</h2>
-        <div class="compound-grid">
-          <article class="compound-card" id="what-are-peptides">
-            <p class="library-tag">Quick Start</p>
-            <h3>What are peptides?</h3>
-            <p>A practical overview focused on what users need to understand before they start tracking anything.</p>
-            <h4>Read this for</h4>
-            <ul>
-              <li>Simple definition without jargon</li>
-              <li>How peptide discussions differ from GLP-1 discussions</li>
-              <li>What to ask your provider before starting</li>
-            </ul>
-          </article>
+      <section class="directory-grid" id="guide-grid" aria-live="polite"></section>
 
-          <article class="compound-card" id="glp1-vs-peptides">
-            <p class="library-tag">Quick Start</p>
-            <h3>GLP-1 vs peptides: what is different?</h3>
-            <p>A side-by-side learning path for people comparing common compounds and protocol expectations.</p>
-            <h4>Read this for</h4>
-            <ul>
-              <li>Category-level differences</li>
-              <li>Different logging priorities</li>
-              <li>How to pick the right guide next</li>
-            </ul>
-          </article>
-
-          <article class="compound-card" id="weekly-tracking-basics">
-            <p class="library-tag">Quick Start</p>
-            <h3>What to track weekly</h3>
-            <p>The minimum useful data set so your logs stay clean and actually help with decision conversations.</p>
-            <h4>Read this for</h4>
-            <ul>
-              <li>Dose timing and adherence basics</li>
-              <li>Symptoms and context notes</li>
-              <li>How to avoid useless data noise</li>
-            </ul>
-          </article>
-
-          <article class="compound-card" id="safety-basics">
-            <p class="library-tag">Quick Start</p>
-            <h3>Safety and red flags basics</h3>
-            <p>High-level reminders about when to escalate concerns and why app logs are not medical diagnosis.</p>
-            <h4>Read this for</h4>
-            <ul>
-              <li>Core safety framing</li>
-              <li>When to stop self-experimenting</li>
-              <li>How to use support and clinician channels</li>
-            </ul>
-          </article>
+      <section class="guide-section latest-updates-module">
+        <div class="module-head">
+          <h2>Latest updates</h2>
+          <a href="updates.html" class="btn btn-outline module-link">Open full update feed</a>
         </div>
+        <div id="latest-updates" class="updates-preview-grid"></div>
       </section>
 
-      <section id="glp1" class="compound-section">
-        <h2>GLP-1 and Related Medications</h2>
-        <div class="compound-grid">
-          <article class="compound-card" id="semaglutide">
-            <p class="library-tag">GLP-1</p>
-            <h3>Semaglutide (Ozempic, Wegovy)</h3>
-            <p>A weekly GLP-1 receptor agonist commonly tracked for metabolic support and weight-management workflows.</p>
-            <h4>What to track in ShotClock</h4>
-            <ul>
-              <li>Dose day consistency and delays</li>
-              <li>Appetite changes across week phases</li>
-              <li>GI symptoms, hydration, and meal tolerance</li>
-            </ul>
-          </article>
-
-          <article class="compound-card" id="tirzepatide">
-            <p class="library-tag">GIP + GLP-1</p>
-            <h3>Tirzepatide (Mounjaro, Zepbound)</h3>
-            <p>A weekly dual agonist protocol often monitored with weight trends, hunger response, and tolerance patterns.</p>
-            <h4>What to track in ShotClock</h4>
-            <ul>
-              <li>Weekly adherence and injection timing</li>
-              <li>Energy changes around dose adjustments</li>
-              <li>Symptom trend stability over multiple weeks</li>
-            </ul>
-          </article>
-
-          <article class="compound-card" id="dulaglutide">
-            <p class="library-tag">GLP-1</p>
-            <h3>Dulaglutide (Trulicity)</h3>
-            <p>A long-acting weekly GLP-1 entry with emphasis on routine consistency and dose-tolerance observations.</p>
-            <h4>What to track in ShotClock</h4>
-            <ul>
-              <li>Missed-dose recovery and schedule normalization</li>
-              <li>Body weight trend direction over time</li>
-              <li>Recurring symptom timing windows</li>
-            </ul>
-          </article>
-
-          <article class="compound-card" id="liraglutide">
-            <p class="library-tag">GLP-1</p>
-            <h3>Liraglutide (Victoza, Saxenda)</h3>
-            <p>A daily GLP-1 option where adherence and injection-site rotation logs are especially important.</p>
-            <h4>What to track in ShotClock</h4>
-            <ul>
-              <li>Daily dose completion streaks</li>
-              <li>Injection site rotation quality</li>
-              <li>Day-to-day appetite and symptom swings</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="peptides" class="compound-section">
-        <h2>Therapeutic Peptides</h2>
-        <div class="compound-grid">
-          <article class="compound-card" id="bpc157">
-            <p class="library-tag">Peptide</p>
-            <h3>BPC-157</h3>
-            <p>Frequently used in self-tracking contexts focused on recovery narratives and localized response notes.</p>
-            <h4>What to track in ShotClock</h4>
-            <ul>
-              <li>Protocol cadence and consistency</li>
-              <li>Target area notes with timeline context</li>
-              <li>Subjective recovery and discomfort trends</li>
-            </ul>
-          </article>
-
-          <article class="compound-card" id="tb500">
-            <p class="library-tag">Peptide</p>
-            <h3>TB-500 (Thymosin Beta-4)</h3>
-            <p>Often tracked as part of staged protocols where users want clean logs around timing and symptom progression.</p>
-            <h4>What to track in ShotClock</h4>
-            <ul>
-              <li>Loading and maintenance phase timing</li>
-              <li>Perceived mobility or recovery changes</li>
-              <li>Any side-effect markers during stack use</li>
-            </ul>
-          </article>
-
-          <article class="compound-card" id="cjc1295-ipamorelin">
-            <p class="library-tag">Peptide Stack</p>
-            <h3>CJC-1295 and Ipamorelin</h3>
-            <p>A common stacked workflow where timing and frequency structure are key to meaningful record quality.</p>
-            <h4>What to track in ShotClock</h4>
-            <ul>
-              <li>Stack timing alignment and adherence</li>
-              <li>Sleep quality and recovery notes</li>
-              <li>Body composition trends over longer windows</li>
-            </ul>
-          </article>
-
-          <article class="compound-card" id="sermorelin">
-            <p class="library-tag">Peptide</p>
-            <h3>Sermorelin</h3>
-            <p>Typically monitored for routine consistency and symptom-level feedback over extended use periods.</p>
-            <h4>What to track in ShotClock</h4>
-            <ul>
-              <li>Dose consistency across weeks</li>
-              <li>Sleep and energy markers</li>
-              <li>Provider-facing summary notes</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="notes" class="compound-section">
-        <h2>How We Write These Guides</h2>
-        <div class="faq-item">
-          <h3>Principles</h3>
-          <p>
-            We write for speed and clarity first: plain language, practical tracking guidance, and clear disclaimers.
-            The goal is helping new users understand what to log and why.
-          </p>
-          <p>
-            Next phase: full guide pages with dated updates, reference links, and version notes while still staying on GitHub Pages.
-          </p>
-        </div>
+      <section class="guide-section compliance-box">
+        <h2>How to use this directory</h2>
+        <p>Use these pages to prepare cleaner questions and better logs, not to self-prescribe.</p>
+        <p>For severe symptoms or emergencies in the United States, call 911 and contact your clinician immediately.</p>
       </section>
     </div>
   </main>
@@ -230,9 +83,9 @@
         <section class="footer-section">
           <h4>Learn</h4>
           <ul>
-            <li><a href="#quick-start">Quick Start</a></li>
-            <li><a href="#glp1">GLP-1 Guides</a></li>
-            <li><a href="#peptides">Peptide Guides</a></li>
+            <li><a href="library.html">Guide Directory</a></li>
+            <li><a href="updates.html">Guide Updates</a></li>
+            <li><a href="guides/semaglutide.html">Semaglutide Guide</a></li>
           </ul>
         </section>
 
@@ -252,5 +105,140 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const searchInput = document.getElementById('guide-search');
+      const filterButtons = Array.from(document.querySelectorAll('.filter-btn'));
+      const grid = document.getElementById('guide-grid');
+      const meta = document.getElementById('directory-meta');
+      const updatesGrid = document.getElementById('latest-updates');
+
+      let guides = [];
+      let currentFilter = 'all';
+      let currentQuery = '';
+
+      const normalize = (value) => String(value || '').toLowerCase();
+
+      const resolveGroup = (guide) => {
+        const category = normalize(guide.category);
+        const status = normalize(guide.status);
+
+        if (category.includes('mineral')) return 'minerals';
+        if (status.includes('experimental') || status.includes('discontinued') || status.includes('regional')) return 'experimental';
+        if (category.includes('glp-1') || category.includes('gip') || category.includes('insulin') || category.includes('metformin')) return 'medications';
+        if (category.includes('peptide') || category.includes('gh secretagogue') || category.includes('nootropic') || category.includes('anti-aging') || category.includes('healing')) return 'peptides';
+        return 'support';
+      };
+
+      const statusClass = (status) => {
+        const value = normalize(status);
+        if (value.includes('approved')) return 'status-approved';
+        if (value.includes('experimental')) return 'status-experimental';
+        if (value.includes('discontinued')) return 'status-discontinued';
+        if (value.includes('regional')) return 'status-regional';
+        if (value.includes('nutrient')) return 'status-nutrient';
+        return 'status-support';
+      };
+
+      const renderGuides = () => {
+        const filtered = guides.filter((guide) => {
+          const haystack = [guide.slug, guide.title, guide.category, guide.status, ...(guide.aliases || [])]
+            .join(' ')
+            .toLowerCase();
+
+          const matchesQuery = currentQuery.length === 0 || haystack.includes(currentQuery);
+          const matchesFilter = currentFilter === 'all' || resolveGroup(guide) === currentFilter;
+
+          return matchesQuery && matchesFilter;
+        });
+
+        meta.textContent = `${filtered.length} guides shown out of ${guides.length}.`;
+
+        if (filtered.length === 0) {
+          grid.innerHTML = '<article class="directory-card"><h3>No guides match</h3><p>Try a broader search term or switch to the All filter.</p></article>';
+          return;
+        }
+
+        grid.innerHTML = filtered
+          .map((guide) => {
+            const aliases = (guide.aliases || []).slice(0, 3).join(', ');
+            return `
+              <article class="directory-card">
+                <div class="directory-card-head">
+                  <span class="status-badge ${statusClass(guide.status)}">${guide.statusLabel || guide.status}</span>
+                  <span class="status-badge status-category">${guide.category}</span>
+                </div>
+                <h3><a href="guides/${guide.slug}.html">${guide.title}</a></h3>
+                <p>${guide.heroSummary}</p>
+                <p class="guide-aliases">Aliases: ${aliases || 'No common aliases listed'}</p>
+                <div class="directory-card-actions">
+                  <a class="btn btn-outline" href="guides/${guide.slug}.html">Open guide</a>
+                </div>
+              </article>
+            `;
+          })
+          .join('');
+      };
+
+      const renderUpdates = (updates) => {
+        const sorted = updates.slice().sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
+
+        updatesGrid.innerHTML = sorted
+          .map((item) => {
+            const links = (item.impactedGuides || [])
+              .slice(0, 4)
+              .map((slug) => `<a href="guides/${slug}.html" class="update-link">${slug}</a>`)
+              .join(' ');
+
+            return `
+              <article class="update-card compact">
+                <div class="update-head">
+                  <p class="update-date">${item.date}</p>
+                  <span class="status-badge status-category">v${item.version}</span>
+                </div>
+                <h3>${item.title}</h3>
+                <p>${item.summary}</p>
+                <p class="update-links-inline">${links}</p>
+              </article>
+            `;
+          })
+          .join('');
+      };
+
+      const setFilter = (filter) => {
+        currentFilter = filter;
+        filterButtons.forEach((button) => {
+          button.classList.toggle('active', button.dataset.filter === filter);
+        });
+        renderGuides();
+      };
+
+      searchInput.addEventListener('input', (event) => {
+        currentQuery = normalize(event.target.value.trim());
+        renderGuides();
+      });
+
+      filterButtons.forEach((button) => {
+        button.addEventListener('click', () => setFilter(button.dataset.filter));
+      });
+
+      Promise.all([
+        fetch('content/guides.json', { cache: 'no-store' }).then((res) => res.json()),
+        fetch('content/updates.json', { cache: 'no-store' }).then((res) => res.json())
+      ])
+        .then(([guideData, updateData]) => {
+          guides = guideData.slice().sort((a, b) => a.title.localeCompare(b.title));
+          renderGuides();
+          renderUpdates(updateData);
+        })
+        .catch((error) => {
+          console.error(error);
+          meta.textContent = 'Unable to load guide data. Please refresh or contact support.';
+          grid.innerHTML = '<article class="directory-card"><h3>Directory unavailable</h3><p>Guide data could not be loaded right now.</p></article>';
+          updatesGrid.innerHTML = '<article class="update-card compact"><h3>Updates unavailable</h3><p>Try again shortly.</p></article>';
+        });
+    }());
+  </script>
 </body>
 </html>
