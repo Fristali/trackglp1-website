@@ -1,136 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShotClock - Professional GLP-1 & Peptide Tracker</title>
-    <meta name="description" content="Track your GLP-1 medications and peptides with medical-grade accuracy. Private, secure, and designed for Ozempic, Wegovy, Mounjaro, and peptide therapy users.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShotClock - Learn Peptides Fast, Track with Confidence</title>
+  <meta name="description" content="Came from TikTok? Learn peptides and GLP-1 basics quickly, then use ShotClock to track your protocol with clear logs and reminders.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <h1>ShotClock</h1>
-            </div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="privacy.html">Privacy</a>
-                <a href="terms.html">Terms</a>
-                <a href="support.html">Support</a>
-            </div>
-        </div>
-    </nav>
+  <nav class="navbar">
+    <div class="container">
+      <a class="nav-brand" href="index.html" aria-label="ShotClock home">
+        <span class="nav-brand-mark">SC</span>
+        <span class="nav-brand-text">ShotClock</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="library.html">Learn</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </nav>
 
-    <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Professional GLP-1 & Peptide Tracking</h1>
-                <p class="hero-subtitle">
-                    The most advanced tracker for GLP-1 medications (Ozempic, Wegovy, Mounjaro) and therapeutic peptides. 
-                    Track injections, monitor progress, and export medical reports.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#" class="btn btn-primary">Download for iOS</a>
-                    <a href="#" class="btn btn-secondary">Download for Android</a>
-                </div>
-                <p class="hero-note">Coming soon to App Store and Google Play</p>
-            </div>
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="hero-badge">Built for TikTok traffic and real users</span>
+        <h1 class="hero-title">Learn peptides fast, then <span class="accent">track everything</span> in one app.</h1>
+        <p class="hero-subtitle">
+          If you found us through social content, start with the learn hub first. You will get plain-language guidance on
+          common compounds, what to track, and what to discuss with your provider.
+        </p>
+        <div class="hero-buttons">
+          <a href="library.html#quick-start" class="btn btn-primary">Start Learning</a>
+          <a href="mailto:support@trackglp1.com?subject=ShotClock%20Beta%20Waitlist" class="btn btn-secondary">Get App Access</a>
         </div>
-    </header>
+        <p class="hero-note">Education first. Tracking second. No hype, no noise.</p>
+      </div>
 
-    <section class="features">
-        <div class="container">
-            <h2>Why Choose ShotClock?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">💉</div>
-                    <h3>Smart Injection Tracking</h3>
-                    <p>Interactive body map shows exactly where you've injected. Automatic site rotation recommendations prevent tissue damage.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Medical-Grade Analytics</h3>
-                    <p>Track weight trends, side effects, and medication levels with professional charts your doctor will appreciate.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Complete Privacy</h3>
-                    <p>Your data never leaves your device unless you choose. No tracking, no ads, no data selling. HIPAA-compliant security.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Works Offline</h3>
-                    <p>Full functionality without internet. Optional cloud backup keeps your data safe across devices.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📄</div>
-                    <h3>Professional Reports</h3>
-                    <p>Export PDF reports for your healthcare provider. Include charts, medication history, and progress photos.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Medication & Peptide Levels</h3>
-                    <p>Advanced pharmacokinetic modeling shows real-time medication and peptide levels in your system.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🧬</div>
-                    <h3>Peptide Protocol Support</h3>
-                    <p>Track BPC-157, TB-500, Ipamorelin, CJC-1295 and more. Perfect for therapeutic peptides and stacking protocols.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⏰</div>
-                    <h3>Multi-Compound Scheduling</h3>
-                    <p>Manage complex injection schedules for multiple medications and peptides with smart reminders and conflict detection.</p>
-                </div>
-            </div>
+      <aside class="hero-panel" aria-label="Start flow">
+        <h2 class="panel-title">Start in 60 Seconds</h2>
+        <p class="panel-subtitle">This is the fastest path most new visitors take.</p>
+        <div class="stat-list">
+          <div class="stat-item">
+            <span class="stat-label">Step 1</span>
+            <span class="stat-value">Pick</span>
+            <p class="stat-footnote">Choose your compound from the Learn hub.</p>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Step 2</span>
+            <span class="stat-value">Read</span>
+            <p class="stat-footnote">Understand what to track week by week.</p>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Step 3</span>
+            <span class="stat-value">Track</span>
+            <p class="stat-footnote">Install ShotClock and log your protocol.</p>
+          </div>
         </div>
-    </section>
+      </aside>
+    </div>
+  </header>
 
-    <section class="cta">
-        <div class="container">
-            <h2>Ready to Take Control of Your Treatment?</h2>
-            <p>Join thousands of users managing their GLP-1 and peptide therapy with confidence.</p>
-            <div class="cta-buttons">
-                <a href="#" class="btn btn-primary">Get Started Free</a>
-            </div>
-            <p class="cta-note">No credit card required • Free for basic features • Premium features coming soon</p>
-        </div>
-    </section>
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>What new users usually want to know first</h2>
+        <p>
+          These are the high-intent questions we optimize for: clear learning, practical tracking, and faster setup.
+        </p>
+      </div>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Product</h4>
-                    <ul>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="support.html">Support</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="/privacy.html#hipaa">HIPAA Compliance</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="mailto:support@trackglp1.com">support@trackglp1.com</a></li>
-                        <li><a href="support.html">Help Center</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 ShotClock. All rights reserved.</p>
-                <p class="disclaimer">ShotClock is not affiliated with Novo Nordisk, Eli Lilly, or any pharmaceutical company.</p>
-            </div>
+      <div class="features-grid">
+        <article class="feature-card">
+          <span class="feature-icon">Q1</span>
+          <h3>What is this compound used for?</h3>
+          <p>Quick profiles for GLP-1s and peptides so users can understand category, context, and common tracking goals.</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">Q2</span>
+          <h3>What should I track every week?</h3>
+          <p>Dose timing, response notes, side effects, and adherence signals that matter for real follow-up discussions.</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">Q3</span>
+          <h3>How do I avoid bad tracking habits?</h3>
+          <p>Practical guidance to reduce missing data, random notes, and inconsistent logs that make progress hard to interpret.</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">Q4</span>
+          <h3>How do I move from learning to action?</h3>
+          <p>Start with Learn, then use ShotClock to build reminders, schedule entries, and export provider-ready summaries.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="signal-strip" aria-label="Positioning">
+    <div class="container">
+      <div class="signal-shell">
+        <div class="signal-item">
+          <span class="signal-value">No Hype</span>
+          <span class="signal-label">Education First</span>
         </div>
-    </footer>
+        <div class="signal-item">
+          <span class="signal-value">Plain English</span>
+          <span class="signal-label">Fast Understanding</span>
+        </div>
+        <div class="signal-item">
+          <span class="signal-value">Track Ready</span>
+          <span class="signal-label">Action in App</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-section" id="library">
+    <div class="container">
+      <div class="section-header">
+        <h2>Most-read learn pages</h2>
+        <p>
+          Start with these if you are new. They are written to get people from confusion to clarity fast.
+        </p>
+      </div>
+
+      <div class="library-grid">
+        <article class="library-card">
+          <p class="library-tag">GLP-1</p>
+          <h3>Semaglutide Basics</h3>
+          <p>What it is, what users typically monitor, and how to log useful weekly data.</p>
+          <a class="btn btn-outline" href="library.html#semaglutide">Open guide</a>
+        </article>
+
+        <article class="library-card">
+          <p class="library-tag">GIP + GLP-1</p>
+          <h3>Tirzepatide Basics</h3>
+          <p>A beginner-friendly breakdown with practical tracking points for consistency and review.</p>
+          <a class="btn btn-outline" href="library.html#tirzepatide">Open guide</a>
+        </article>
+
+        <article class="library-card">
+          <p class="library-tag">Peptide</p>
+          <h3>BPC-157 Basics</h3>
+          <p>How people usually structure logs so results and patterns are easier to discuss later.</p>
+          <a class="btn btn-outline" href="library.html#bpc157">Open guide</a>
+        </article>
+
+        <article class="library-card">
+          <p class="library-tag">Peptide Stack</p>
+          <h3>CJC-1295 + Ipamorelin</h3>
+          <p>A concise starter view for timing, consistency, and meaningful note-taking.</p>
+          <a class="btn btn-outline" href="library.html#cjc1295-ipamorelin">Open guide</a>
+        </article>
+      </div>
+
+      <p class="library-footnote">Educational content only. ShotClock does not provide medical advice or dosage instructions.</p>
+    </div>
+  </section>
+
+  <section class="cta-section" id="download">
+    <div class="container">
+      <div class="cta-shell">
+        <h2>Ready to move from learning to tracking?</h2>
+        <p>Join the beta and use ShotClock to schedule doses, log outcomes, and keep your protocol clean and consistent.</p>
+        <div class="cta-buttons">
+          <a href="mailto:support@trackglp1.com?subject=ShotClock%20iOS%20Beta" class="btn btn-primary">Join iOS Beta</a>
+          <a href="mailto:support@trackglp1.com?subject=ShotClock%20Android%20Beta" class="btn btn-secondary">Join Android Beta</a>
+        </div>
+        <p class="cta-note">Built for serious tracking with privacy-first defaults.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <section class="footer-section">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="index.html#features">Why ShotClock</a></li>
+            <li><a href="index.html#download">Download</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </section>
+
+        <section class="footer-section">
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="library.html#quick-start">Quick Start</a></li>
+            <li><a href="library.html#glp1">GLP-1 Guides</a></li>
+            <li><a href="library.html#peptides">Peptide Guides</a></li>
+          </ul>
+        </section>
+
+        <section class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="mailto:privacy@trackglp1.com">Privacy Contact</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ShotClock. All rights reserved.</p>
+        <p class="disclaimer">ShotClock is an organizational tracker and does not replace professional medical care.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
