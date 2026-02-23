@@ -927,13 +927,11 @@ h3 {
 }
 
 /* Guide pages */
-.guide-content,
-.updates-content {
+.guide-content {
   padding: var(--space-8) 0;
 }
 
-.guide-container,
-.updates-container {
+.guide-container {
   max-width: 980px;
 }
 
@@ -1194,66 +1192,6 @@ h3 {
   margin-top: var(--space-4);
 }
 
-/* Updates page and modules */
-.updates-feed,
-.updates-preview-grid {
-  display: grid;
-  gap: var(--space-4);
-}
-
-.update-card {
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: var(--space-5);
-}
-
-.update-card.compact {
-  padding: var(--space-4);
-}
-
-.update-head,
-.module-head {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  justify-content: space-between;
-  margin-bottom: var(--space-3);
-}
-
-.update-date {
-  color: var(--text-muted);
-  font-size: 0.86rem;
-  margin: 0;
-}
-
-.update-link {
-  border: 1px solid var(--border);
-  border-radius: var(--radius-pill);
-  color: #7fc0ff;
-  display: inline-flex;
-  font-size: 0.78rem;
-  margin: 0 6px 6px 0;
-  padding: 5px 10px;
-}
-
-.update-link:hover {
-  background: rgba(77, 163, 255, 0.15);
-}
-
-.update-links-inline {
-  margin-bottom: 0;
-}
-
-.module-link {
-  margin-left: auto;
-}
-
-.latest-updates-module {
-  margin-bottom: var(--space-8);
-}
-
 @media (max-width: 900px) {
   .directory-card {
     grid-column: span 12;
@@ -1261,8 +1199,7 @@ h3 {
 }
 
 @media (max-width: 760px) {
-  .guide-head-meta,
-  .module-head {
+  .guide-head-meta {
     align-items: flex-start;
     flex-direction: column;
   }

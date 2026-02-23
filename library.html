@@ -18,7 +18,6 @@
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="library.html" class="active">Learn</a>
-        <a href="updates.html">Updates</a>
         <a href="support.html">Support</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
@@ -92,14 +91,6 @@
 
       <section class="directory-grid" id="guide-grid" aria-live="polite"></section>
 
-      <section class="guide-section latest-updates-module">
-        <div class="module-head">
-          <h2>Latest updates</h2>
-          <a href="updates.html" class="btn btn-outline module-link">Open full update feed</a>
-        </div>
-        <div id="latest-updates" class="updates-preview-grid"></div>
-      </section>
-
       <section class="guide-section compliance-box">
         <h2>How to use this directory</h2>
         <p>Use these pages to prepare cleaner questions and better logs, not to self-prescribe.</p>
@@ -124,7 +115,6 @@
           <h4>Learn</h4>
           <ul>
             <li><a href="library.html">Guide Directory</a></li>
-            <li><a href="updates.html">Guide Updates</a></li>
             <li><a href="guides/semaglutide.html">Semaglutide Guide</a></li>
           </ul>
         </section>
@@ -151,7 +141,6 @@
       const searchInput = document.getElementById('guide-search');
       const grid = document.getElementById('guide-grid');
       const meta = document.getElementById('directory-meta');
-      const updatesGrid = document.getElementById('latest-updates');
       const activeFiltersEl = document.getElementById('active-filters');
       const clearFiltersButton = document.getElementById('clear-filters');
       const facetChips = Array.from(document.querySelectorAll('.facet-chip'));
@@ -348,35 +337,6 @@
         }).join('');
       };
 
-      const renderUpdates = (updates) => {
-        const sorted = updates.slice().sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
-
-        updatesGrid.innerHTML = sorted
-          .map((item) => {
-            const links = (item.impactedGuides || [])
-              .slice(0, 4)
-              .map((slug) => {
-                const guide = guides.find((entry) => entry.slug === slug);
-                const label = guide?.displayTitle || guide?.title || slug;
-                return `<a href="guides/${escapeHtml(slug)}.html" class="update-link">${escapeHtml(label)}</a>`;
-              })
-              .join(' ');
-
-            return `
-              <article class="update-card compact">
-                <div class="update-head">
-                  <p class="update-date">${escapeHtml(item.date)}</p>
-                  <span class="status-badge status-category">v${escapeHtml(item.version)}</span>
-                </div>
-                <h3>${escapeHtml(item.title)}</h3>
-                <p>${escapeHtml(item.summary)}</p>
-                <p class="update-links-inline">${links}</p>
-              </article>
-            `;
-          })
-          .join('');
-      };
-
       const updateFacetButtons = () => {
         facetChips.forEach((chip) => {
           const facet = chip.dataset.facet;
@@ -439,11 +399,9 @@
       restoreStateFromUrl();
       searchInput.value = state.q;
 
-      Promise.all([
-        fetch('content/guides.json', { cache: 'no-store' }).then((res) => res.json()),
-        fetch('content/updates.json', { cache: 'no-store' }).then((res) => res.json())
-      ])
-        .then(([guideData, updateData]) => {
+      fetch('content/guides.json', { cache: 'no-store' })
+        .then((res) => res.json())
+        .then((guideData) => {
           guides = guideData
             .map((guide) => ({ ...guide, searchIndex: buildSearchIndex(guide) }))
             .sort((a, b) => (a.displayTitle || a.title).localeCompare(b.displayTitle || b.title));
@@ -451,13 +409,11 @@
           updateFacetButtons();
           renderActiveFilters();
           renderGuides();
-          renderUpdates(updateData);
         })
         .catch((error) => {
           console.error(error);
           meta.textContent = 'Unable to load guide data. Please refresh or contact support.';
           grid.innerHTML = '<article class="directory-card"><h3>Directory unavailable</h3><p>Guide data could not be loaded right now.</p></article>';
-          updatesGrid.innerHTML = '<article class="update-card compact"><h3>Updates unavailable</h3><p>Try again shortly.</p></article>';
         });
     }());
   </script>

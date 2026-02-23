@@ -14,15 +14,11 @@ const SITE_URL = 'https://trackglp1.com';
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
 
 const guides = JSON.parse(fs.readFileSync(path.join(contentDir, 'guides.json'), 'utf8'));
-const updates = JSON.parse(fs.readFileSync(path.join(contentDir, 'updates.json'), 'utf8'));
 const guideTemplate = fs.readFileSync(path.join(templatesDir, 'guide.template.html'), 'utf8');
-const updatesTemplate = fs.readFileSync(path.join(templatesDir, 'updates.template.html'), 'utf8');
 
 if (!fs.existsSync(guidesDir)) {
   fs.mkdirSync(guidesDir, { recursive: true });
 }
-
-const guideBySlug = new Map(guides.map((guide) => [guide.slug, guide]));
 
 const escapeHtml = (value) => String(value)
   .replace(/&/g, '&amp;')
@@ -208,74 +204,10 @@ const writeGuidePages = () => {
   }
 };
 
-const writeUpdatesPage = () => {
-  const updatesHtml = updates
-    .slice()
-    .sort((a, b) => b.date.localeCompare(a.date))
-    .map((item) => {
-      const impacted = (item.impactedGuides || [])
-        .map((slug) => {
-          const guide = guideBySlug.get(slug);
-          const label = guide?.displayTitle || guide?.title || slug;
-          return `<a href="guides/${escapeHtml(slug)}.html" class="update-link">${escapeHtml(label)}</a>`;
-        })
-        .join(' ');
-
-      return `<article class="update-card" id="${escapeHtml(item.id)}">
-          <div class="update-head">
-            <p class="update-date">${escapeHtml(item.date)}</p>
-            <span class="status-badge status-category">v${escapeHtml(item.version || '1.0.0')}</span>
-          </div>
-          <h2>${escapeHtml(item.title)}</h2>
-          <p>${escapeHtml(item.summary)}</p>
-          <div class="update-impacted">
-            <h3>Impacted guides</h3>
-            <p>${impacted}</p>
-          </div>
-        </article>`;
-    })
-    .join('\n\n        ');
-
-  const page = updatesTemplate.replace('{{UPDATES_ITEMS_HTML}}', updatesHtml);
-  fs.writeFileSync(path.join(root, 'updates.html'), page);
-};
-
-const writeUpdatesFeed = () => {
-  const sortedUpdates = updates.slice().sort((a, b) => b.date.localeCompare(a.date));
-
-  const feedItems = sortedUpdates
-    .map((item) => {
-      const url = `${SITE_URL}/updates.html#${item.id}`;
-      return `<entry>
-    <id>${escapeHtml(`${SITE_URL}/updates/${item.id}`)}</id>
-    <title>${escapeHtml(item.title)}</title>
-    <updated>${escapeHtml(item.date)}T00:00:00Z</updated>
-    <link href="${escapeHtml(url)}"/>
-    <summary>${escapeHtml(item.summary)}</summary>
-  </entry>`;
-    })
-    .join('\n');
-
-  const feed = `<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <id>${SITE_URL}/updates.xml</id>
-  <title>ShotClock Guide Updates</title>
-  <updated>${sortedUpdates[0]?.date || BUILD_DATE}T00:00:00Z</updated>
-  <link href="${SITE_URL}/updates.xml" rel="self"/>
-  <link href="${SITE_URL}/updates.html"/>
-  <author><name>ShotClock</name></author>
-${feedItems}
-</feed>
-`;
-
-  fs.writeFileSync(path.join(root, 'updates.xml'), feed);
-};
-
 const writeSitemap = () => {
   const staticPaths = [
     '/index.html',
     '/library.html',
-    '/updates.html',
     '/support.html',
     '/privacy.html',
     '/terms.html'
@@ -310,10 +242,8 @@ const writeRobots = () => {
 };
 
 writeGuidePages();
-writeUpdatesPage();
-writeUpdatesFeed();
 writeSitemap();
 writeRobots();
 
 console.log(`Generated ${guides.length} guide pages.`);
-console.log('Generated updates.html, updates.xml, sitemap.xml, and robots.txt.');
+console.log('Generated sitemap.xml and robots.txt.');

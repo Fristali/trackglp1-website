@@ -8,7 +8,6 @@ const __dirname = path.dirname(__filename);
 const root = path.resolve(__dirname, '..');
 
 const guidesPath = path.join(root, 'content', 'guides.json');
-const updatesPath = path.join(root, 'content', 'updates.json');
 
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -74,14 +73,9 @@ const errors = [];
 
 const readJson = (filePath) => JSON.parse(fs.readFileSync(filePath, 'utf8'));
 const guides = readJson(guidesPath);
-const updates = readJson(updatesPath);
 
 if (!Array.isArray(guides) || guides.length === 0) {
   errors.push('content/guides.json must be a non-empty array.');
-}
-
-if (!Array.isArray(updates) || updates.length === 0) {
-  errors.push('content/updates.json must be a non-empty array.');
 }
 
 const requiredGuideFields = [
@@ -359,35 +353,6 @@ for (const slug of top50) {
   }
 }
 
-const updateIds = new Set();
-for (const [index, entry] of updates.entries()) {
-  const label = `update[${index}]`;
-  for (const field of ['id', 'date', 'title', 'summary', 'impactedGuides', 'version']) {
-    if (!(field in entry)) {
-      errors.push(`${label} missing required field: ${field}`);
-    }
-  }
-
-  if (entry.id && updateIds.has(entry.id)) {
-    errors.push(`${label} duplicate update id: ${entry.id}`);
-  }
-  updateIds.add(entry.id);
-
-  if (entry.date && !DATE_RE.test(entry.date)) {
-    errors.push(`${label} date must be YYYY-MM-DD.`);
-  }
-
-  if (!Array.isArray(entry.impactedGuides) || entry.impactedGuides.length === 0) {
-    errors.push(`${label} impactedGuides must be a non-empty array.`);
-  } else {
-    for (const slug of entry.impactedGuides) {
-      if (!guideSlugs.has(slug)) {
-        errors.push(`${label} references unknown guide slug: ${slug}`);
-      }
-    }
-  }
-}
-
 if (errors.length > 0) {
   console.error('Validation failed with the following issues:');
   for (const err of errors) {
@@ -396,4 +361,4 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log(`Validation passed: ${guides.length} guides and ${updates.length} updates are schema-complete.`);
+console.log(`Validation passed: ${guides.length} guides are schema-complete.`);
