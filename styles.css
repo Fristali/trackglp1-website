@@ -250,40 +250,6 @@ h3 {
   max-width: 58ch;
 }
 
-.hero-brand-strip {
-  align-items: center;
-  background: #1e2731;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  display: inline-flex;
-  gap: var(--space-3);
-  margin-bottom: var(--space-6);
-  padding: 10px 12px;
-}
-
-.hero-brand-logo {
-  border-radius: 10px;
-  flex-shrink: 0;
-  height: 36px;
-  width: 36px;
-}
-
-.hero-brand-label {
-  color: var(--text-primary);
-  font-family: var(--font-heading);
-  font-size: 0.84rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-.hero-brand-meta {
-  color: var(--text-secondary);
-  font-size: 0.82rem;
-  margin: 0;
-}
-
 .hero-buttons {
   align-items: center;
   display: flex;
@@ -356,31 +322,6 @@ h3 {
 
 .hero-panel::after {
   content: none;
-}
-
-.app-preview {
-  background: #151d26;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  margin: 0 0 var(--space-5);
-  padding: var(--space-3);
-}
-
-.app-preview img {
-  border: 1px solid rgba(77, 163, 255, 0.22);
-  border-radius: 12px;
-  display: block;
-  max-height: 420px;
-  object-fit: cover;
-  object-position: top center;
-  width: 100%;
-}
-
-.app-preview figcaption {
-  color: var(--text-muted);
-  font-size: 0.77rem;
-  margin-top: var(--space-2);
-  text-transform: uppercase;
 }
 
 .panel-title {
