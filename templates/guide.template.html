@@ -43,11 +43,13 @@
         <div class="guide-head-meta">
           <span class="status-badge {{STATUS_CLASS}}">{{STATUS_LABEL}}</span>
           <span class="status-badge status-category">{{CATEGORY}}</span>
+          <span class="status-badge legal-status {{REGULATORY_CLASS_CHIP_CLASS}}">{{REGULATORY_CLASS_LABEL}}</span>
           <span class="guide-date">Reviewed: {{LAST_REVIEWED}}</span>
         </div>
         <h1>{{DISPLAY_TITLE}}</h1>
         <p class="guide-subtitle">{{SUBTITLE}}</p>
         <p>{{HERO_SUMMARY}}</p>
+        <p class="guide-legal-note">{{LEGAL_NOTICE}}</p>
         <p class="guide-aliases">Also known as: {{ALIASES}}</p>
         <div class="taxonomy-row">
           {{TAXONOMY_CHIPS_HTML}}
@@ -60,85 +62,87 @@
 
       <div class="guide-layout">
         <section class="guide-section">
-          <h2>What It Is Meant For</h2>
+          <h2>What It Is Meant For {{CONFIDENCE_USE_CASES_CHIP}}</h2>
           <ul>
             {{USE_CASES_HTML}}
           </ul>
         </section>
 
         <section class="guide-section">
-          <h2>Who Usually Discusses This with a Provider</h2>
+          <h2>Who May Discuss This with a Provider {{CONFIDENCE_RISK_SCREEN_CHIP}}</h2>
           <ul>
-            {{CANDIDATE_PROFILE_HTML}}
+            {{RISK_WHO_DISCUSS_HTML}}
           </ul>
-          <h3>Who Should Pause or Use Extra Caution</h3>
+          <h3>Who Should Avoid or Pause</h3>
           <ul>
-            {{AVOIDANCE_FLAGS_HTML}}
+            {{RISK_WHO_AVOID_HTML}}
           </ul>
         </section>
 
         <section class="guide-section">
-          <h2>Potential Side Effects</h2>
+          <h2>Potential Side Effects {{CONFIDENCE_RISK_SCREEN_CHIP}}</h2>
           <div class="side-effects-grid">
             <div>
               <h3>More common</h3>
               <ul>
-                {{SIDE_EFFECTS_COMMON_HTML}}
+                {{RISK_SIDE_EFFECTS_COMMON_HTML}}
               </ul>
             </div>
             <div>
               <h3>Serious or urgent</h3>
               <ul>
-                {{SIDE_EFFECTS_SERIOUS_HTML}}
+                {{RISK_SIDE_EFFECTS_SERIOUS_HTML}}
               </ul>
             </div>
+          </div>
+          <div class="emergency-panel">
+            <h3>Emergency Signals</h3>
+            <ul>
+              {{RISK_EMERGENCY_SIGNALS_HTML}}
+            </ul>
           </div>
         </section>
 
         <section class="guide-section">
-          <h2>Dosing and Protocol Context</h2>
-          <p>{{DOSING_OVERVIEW}}</p>
-          <h3>Common protocol patterns</h3>
+          <h2>Dosing Framework (Educational, Non-Prescriptive) {{CONFIDENCE_DOSING_FRAMEWORK_CHIP}}</h2>
+          <h3>Pace Principles {{CONFIDENCE_DOSING_PACE_CHIP}}</h3>
           <ul>
-            {{PROTOCOL_PATTERNS_HTML}}
+            {{DOSING_PACE_PRINCIPLES_HTML}}
           </ul>
-          <h3>Common real-world pacing patterns</h3>
+          <h3>Hold Triggers {{CONFIDENCE_DOSING_HOLD_CHIP}}</h3>
           <ul>
-            {{REAL_WORLD_PATTERNS_HTML}}
+            {{DOSING_HOLD_TRIGGERS_HTML}}
           </ul>
-          <h3>Monitoring windows</h3>
+          <h3>Resume Criteria {{CONFIDENCE_DOSING_RESUME_CHIP}}</h3>
           <ul>
-            {{MONITORING_WINDOWS_HTML}}
+            {{DOSING_RESUME_CRITERIA_HTML}}
           </ul>
-          <h3>Escalation and hold boundaries</h3>
+          <h3>Tracking Focus in ShotClock {{CONFIDENCE_DOSING_TRACKING_CHIP}}</h3>
           <ul>
-            {{ESCALATION_BOUNDARIES_HTML}}
+            {{DOSING_TRACKING_FOCUS_HTML}}
+          </ul>
+          <p class="uncertainty-note">{{DOSING_UNCERTAINTY_STATEMENT}}</p>
+        </section>
+
+        <section class="guide-section evidence-panel">
+          <h2>Evidence and Confidence</h2>
+          <div class="evidence-overall">
+            <span class="confidence-chip confidence-{{EVIDENCE_OVERALL_CLASS}}">{{EVIDENCE_OVERALL_LABEL}}</span>
+            <p>{{EVIDENCE_OVERALL_RATIONALE}}</p>
+          </div>
+          <div class="evidence-by-section">
+            {{EVIDENCE_BY_SECTION_HTML}}
+          </div>
+          <h3>Known Data Gaps</h3>
+          <ul>
+            {{EVIDENCE_DATA_GAPS_HTML}}
           </ul>
         </section>
 
-        <section class="guide-section">
-          <h2>What to Track in ShotClock</h2>
-          <ul>
-            {{TRACKING_SIGNALS_HTML}}
-          </ul>
-        </section>
+        {{COMMUNITY_SECTION_HTML}}
 
         <section class="guide-section">
-          <h2>Safety and Red Flags</h2>
-          <ul>
-            {{SAFETY_FLAGS_HTML}}
-          </ul>
-        </section>
-
-        <section class="guide-section">
-          <h2>Questions for Your Provider</h2>
-          <ul>
-            {{PROVIDER_QUESTIONS_HTML}}
-          </ul>
-        </section>
-
-        <section class="guide-section">
-          <h2>Sources</h2>
+          <h2>Sources {{CONFIDENCE_SOURCES_CHIP}}</h2>
           <ol class="sources-list">
             {{CITATIONS_HTML}}
           </ol>
@@ -146,9 +150,10 @@
 
         <section class="guide-section compliance-box">
           <h2>Compliance and Medical Notice</h2>
-          <p>Educational content only. This page is not medical advice, diagnosis, or a dosing prescription.</p>
+          <p>Educational content only. This page is not medical advice, diagnosis, treatment, or a dosing prescription.</p>
           <p>For severe reactions or urgent symptoms in the United States, call 911 and seek immediate emergency care.</p>
-          <p>Dose changes and protocol decisions should be made with a licensed healthcare professional.</p>
+          <p>No section on this page should be interpreted as an instruction to start, stop, increase, decrease, or schedule a medication or compound.</p>
+          <p>Protocol decisions should be made with a licensed healthcare professional who understands your history.</p>
         </section>
       </div>
     </div>

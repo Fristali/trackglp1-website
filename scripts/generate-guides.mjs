@@ -43,21 +43,71 @@ const statusClass = (status) => {
   return 'status-support';
 };
 
+const CONFIDENCE_LABELS = {
+  high: 'High confidence',
+  moderate: 'Moderate confidence',
+  low: 'Low confidence',
+  insufficient: 'Insufficient evidence'
+};
+
+const confidenceClass = (confidence) => {
+  if (confidence === 'high') return 'high';
+  if (confidence === 'moderate') return 'moderate';
+  if (confidence === 'insufficient') return 'insufficient';
+  return 'low';
+};
+
+const confidenceChip = (confidence) => {
+  const key = confidenceClass(confidence);
+  const label = CONFIDENCE_LABELS[key];
+  return `<span class="confidence-chip confidence-${key}">${escapeHtml(label)}</span>`;
+};
+
+const confidenceChipForSection = (guide, sectionKey) => {
+  const sections = guide.evidenceProfile?.bySection || [];
+  const section = sections.find((entry) => entry.sectionKey === sectionKey);
+  return confidenceChip(section?.confidence || guide.evidenceProfile?.overall || 'low');
+};
+
+const REGULATORY_LABELS = {
+  approved_label: 'Regulatory: Approved Label Context',
+  regional_label: 'Regulatory: Regional Label Context',
+  off_label_context: 'Regulatory: Off-Label / Limited Label Context',
+  investigational: 'Regulatory: Investigational',
+  unregulated_market: 'Regulatory: Unregulated Market',
+  nutrient_support: 'Regulatory: Nutrient Support Context'
+};
+
+const regulatoryClassName = (classification) => {
+  if (classification === 'approved_label') return 'regulatory-approved';
+  if (classification === 'regional_label') return 'regulatory-regional';
+  if (classification === 'nutrient_support') return 'regulatory-nutrient';
+  if (classification === 'off_label_context') return 'regulatory-offlabel';
+  if (classification === 'unregulated_market') return 'regulatory-unregulated';
+  return 'regulatory-investigational';
+};
+
 const warningBlock = (guide) => {
-  if (!['experimental', 'discontinued', 'regional-approval'].includes(guide.status)) {
+  const classification = guide.regulatoryContext?.classification;
+  if (!['experimental', 'discontinued', 'regional-approval'].includes(guide.status)
+    && !['investigational', 'unregulated_market', 'off_label_context'].includes(classification)) {
     return '';
   }
 
-  const warning = guide.status === 'discontinued'
-    ? 'Legacy or discontinued status: availability, safety documentation, and market oversight may differ by region and date.'
-    : guide.status === 'regional-approval'
-      ? 'Regional approval status: this therapy may be approved in some jurisdictions but not others.'
-      : 'Experimental status: investigational therapies may have limited long-term safety and efficacy evidence.';
+  const warning = classification === 'unregulated_market'
+    ? 'Unregulated market context: authoritative safety oversight and standardized product quality may be absent.'
+    : classification === 'investigational'
+      ? 'Investigational context: no broadly established regulated dosing protocol exists, and long-term safety may remain uncertain.'
+      : guide.status === 'discontinued'
+        ? 'Legacy or discontinued status: availability, safety documentation, and market oversight may differ by region and date.'
+        : guide.status === 'regional-approval'
+          ? 'Regional approval status: this therapy may be approved in some jurisdictions but not others.'
+          : 'Off-label or limited-label context: recommendations vary by clinician judgment and local regulatory status.';
 
   return `<section class="guide-section warning-box">
         <h2>Important Status Notice</h2>
         <p>${escapeHtml(warning)}</p>
-        <p>Use this page for education and tracking preparation only. Clinical decisions should be made with a licensed provider.</p>
+        <p>Use this page for education and tracking preparation only. It is not a directive to start, stop, increase, or schedule use.</p>
       </section>`;
 };
 
@@ -118,6 +168,41 @@ const unique = (values) => {
     result.push(item);
   }
   return result;
+};
+
+const evidenceBySectionHtml = (guide) => {
+  const sections = guide.evidenceProfile?.bySection || [];
+  if (sections.length === 0) {
+    return '<p class="evidence-empty">No section-level evidence map is available.</p>';
+  }
+
+  return sections.map((entry) => {
+    const key = escapeHtml(entry.sectionKey || 'section');
+    const rationale = escapeHtml(entry.rationale || 'No rationale provided.');
+    const citations = (entry.citationIds || []).map((id) => `<a class="citation-chip" href="#cite-${escapeHtml(id)}">[${escapeHtml(id)}]</a>`).join(' ');
+    return `<article class="evidence-item">
+            <div class="evidence-item-head">
+              <span class="evidence-key">${key}</span>
+              ${confidenceChip(entry.confidence)}
+            </div>
+            <p>${rationale}</p>
+            <div class="evidence-citations">${citations}</div>
+          </article>`;
+  }).join('\n          ');
+};
+
+const communitySectionHtml = (guide) => {
+  const community = guide.communityReports;
+  if (!community || !community.included) return '';
+
+  return `<section class="guide-section community-panel">
+          <h2>Community-Reported Patterns ${confidenceChip(community.confidence || 'low')}</h2>
+          <p class="community-policy">Summarized context only. No public forum links are provided and this is not medical instruction.</p>
+          <ul>
+            ${toListItems(community.summary || [])}
+          </ul>
+          <p class="community-caution">${escapeHtml(community.safetyCaution || '')}</p>
+        </section>`;
 };
 
 const writeGuidePages = () => {
@@ -185,26 +270,41 @@ const writeGuidePages = () => {
     page = page.replace(/{{STATUS_CLASS}}/g, statusClass(guide.status));
     page = page.replace(/{{STATUS_LABEL}}/g, escapeHtml(guide.statusLabel || guide.status));
     page = page.replace(/{{CATEGORY}}/g, escapeHtml(guide.category));
+    page = page.replace(/{{REGULATORY_CLASS_LABEL}}/g, escapeHtml(REGULATORY_LABELS[guide.regulatoryContext?.classification] || 'Regulatory: Context Not Classified'));
+    page = page.replace(/{{REGULATORY_CLASS_CHIP_CLASS}}/g, regulatoryClassName(guide.regulatoryContext?.classification));
     page = page.replace(/{{LAST_REVIEWED}}/g, escapeHtml(guide.lastReviewed));
     page = page.replace(/{{HERO_SUMMARY}}/g, escapeHtml(guide.heroSummary));
+    page = page.replace(/{{LEGAL_NOTICE}}/g, escapeHtml(guide.regulatoryContext?.legalNotice || 'Use educational content as context for provider discussions only.'));
     page = page.replace(/{{ALIASES}}/g, aliases);
     page = page.replace(/{{TAXONOMY_CHIPS_HTML}}/g, taxonomyChips(guide));
     page = page.replace(/{{ACRONYM_PANEL_HTML}}/g, acronymPanel(guide));
     page = page.replace(/{{COMPOSITION_PANEL_HTML}}/g, compositionPanel(guide));
     page = page.replace(/{{WARNING_BLOCK}}/g, warningBlock(guide));
     page = page.replace(/{{USE_CASES_HTML}}/g, toListItems(guide.useCases || []));
-    page = page.replace(/{{CANDIDATE_PROFILE_HTML}}/g, toListItems(guide.candidateProfile || []));
-    page = page.replace(/{{AVOIDANCE_FLAGS_HTML}}/g, toListItems(guide.avoidanceFlags || []));
-    page = page.replace(/{{SIDE_EFFECTS_COMMON_HTML}}/g, toListItems(guide.sideEffects?.common || []));
-    page = page.replace(/{{SIDE_EFFECTS_SERIOUS_HTML}}/g, toListItems(guide.sideEffects?.serious || []));
-    page = page.replace(/{{DOSING_OVERVIEW}}/g, formatWithCitations(guide.dosingSection.overview));
-    page = page.replace(/{{PROTOCOL_PATTERNS_HTML}}/g, toListItems(guide.dosingSection.protocolPatterns));
-    page = page.replace(/{{REAL_WORLD_PATTERNS_HTML}}/g, toListItems(guide.dosingSection.realWorldPatterns || []));
-    page = page.replace(/{{MONITORING_WINDOWS_HTML}}/g, toListItems(guide.dosingSection.monitoringWindows));
-    page = page.replace(/{{ESCALATION_BOUNDARIES_HTML}}/g, toListItems(guide.dosingSection.escalationBoundaries || []));
-    page = page.replace(/{{TRACKING_SIGNALS_HTML}}/g, toListItems(guide.trackingSignals));
-    page = page.replace(/{{SAFETY_FLAGS_HTML}}/g, toListItems(guide.safetyFlags));
-    page = page.replace(/{{PROVIDER_QUESTIONS_HTML}}/g, toListItems(guide.providerQuestions));
+    page = page.replace(/{{RISK_WHO_DISCUSS_HTML}}/g, toListItems(guide.riskScreen?.whoMayDiscussWithProvider || guide.candidateProfile || []));
+    page = page.replace(/{{RISK_WHO_AVOID_HTML}}/g, toListItems(guide.riskScreen?.whoShouldAvoidOrPause || guide.avoidanceFlags || []));
+    page = page.replace(/{{RISK_SIDE_EFFECTS_COMMON_HTML}}/g, toListItems(guide.riskScreen?.sideEffectsCommon || guide.sideEffects?.common || []));
+    page = page.replace(/{{RISK_SIDE_EFFECTS_SERIOUS_HTML}}/g, toListItems(guide.riskScreen?.sideEffectsSerious || guide.sideEffects?.serious || []));
+    page = page.replace(/{{RISK_EMERGENCY_SIGNALS_HTML}}/g, toListItems(guide.riskScreen?.emergencySignals || []));
+    page = page.replace(/{{DOSING_PACE_PRINCIPLES_HTML}}/g, toListItems(guide.dosingFramework?.pacePrinciples || []));
+    page = page.replace(/{{DOSING_HOLD_TRIGGERS_HTML}}/g, toListItems(guide.dosingFramework?.holdTriggers || []));
+    page = page.replace(/{{DOSING_RESUME_CRITERIA_HTML}}/g, toListItems(guide.dosingFramework?.resumeCriteria || []));
+    page = page.replace(/{{DOSING_TRACKING_FOCUS_HTML}}/g, toListItems(guide.dosingFramework?.trackingFocus || []));
+    page = page.replace(/{{DOSING_UNCERTAINTY_STATEMENT}}/g, escapeHtml(guide.dosingFramework?.uncertaintyStatement || 'Evidence confidence varies by source quality and population context.'));
+    page = page.replace(/{{EVIDENCE_OVERALL_CLASS}}/g, confidenceClass(guide.evidenceProfile?.overall || 'low'));
+    page = page.replace(/{{EVIDENCE_OVERALL_LABEL}}/g, escapeHtml(CONFIDENCE_LABELS[confidenceClass(guide.evidenceProfile?.overall || 'low')]));
+    page = page.replace(/{{EVIDENCE_OVERALL_RATIONALE}}/g, escapeHtml(guide.evidenceProfile?.overallRationale || 'Confidence reflects source quality, consistency, and directness.'));
+    page = page.replace(/{{EVIDENCE_BY_SECTION_HTML}}/g, evidenceBySectionHtml(guide));
+    page = page.replace(/{{EVIDENCE_DATA_GAPS_HTML}}/g, toListItems(guide.evidenceProfile?.dataGaps || []));
+    page = page.replace(/{{COMMUNITY_SECTION_HTML}}/g, communitySectionHtml(guide));
+    page = page.replace(/{{CONFIDENCE_USE_CASES_CHIP}}/g, confidenceChipForSection(guide, 'use_cases'));
+    page = page.replace(/{{CONFIDENCE_RISK_SCREEN_CHIP}}/g, confidenceChipForSection(guide, 'risk_screen'));
+    page = page.replace(/{{CONFIDENCE_DOSING_FRAMEWORK_CHIP}}/g, confidenceChipForSection(guide, 'dosing_framework'));
+    page = page.replace(/{{CONFIDENCE_DOSING_PACE_CHIP}}/g, confidenceChipForSection(guide, 'dosing_pace'));
+    page = page.replace(/{{CONFIDENCE_DOSING_HOLD_CHIP}}/g, confidenceChipForSection(guide, 'dosing_hold'));
+    page = page.replace(/{{CONFIDENCE_DOSING_RESUME_CHIP}}/g, confidenceChipForSection(guide, 'dosing_resume'));
+    page = page.replace(/{{CONFIDENCE_DOSING_TRACKING_CHIP}}/g, confidenceChipForSection(guide, 'dosing_tracking'));
+    page = page.replace(/{{CONFIDENCE_SOURCES_CHIP}}/g, confidenceChipForSection(guide, 'sources'));
     page = page.replace(/{{CITATIONS_HTML}}/g, citationsHtml);
 
     fs.writeFileSync(path.join(guidesDir, `${guide.slug}.html`), page);

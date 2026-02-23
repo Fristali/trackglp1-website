@@ -44,6 +44,31 @@ const allowedStatusTags = new Set([
 const allowedRouteTags = new Set(['Injectable', 'Oral', 'Mixed/Unknown']);
 const allowedFormatTags = new Set(['Single Compound', 'Blend']);
 const allowedVoiceProfiles = new Set(['clinical', 'coach', 'caution', 'support']);
+const allowedRegulatoryClassifications = new Set([
+  'approved_label',
+  'regional_label',
+  'off_label_context',
+  'investigational',
+  'unregulated_market',
+  'nutrient_support'
+]);
+const allowedEvidenceConfidence = new Set(['high', 'moderate', 'low', 'insufficient']);
+const requiredEvidenceSections = new Set([
+  'use_cases',
+  'risk_screen',
+  'dosing_framework',
+  'dosing_pace',
+  'dosing_hold',
+  'dosing_resume',
+  'dosing_tracking',
+  'community_reports',
+  'sources'
+]);
+
+const DOSAGE_UNIT_RE = /\b(?:\d+(?:\.\d+)?\s*)?(?:mg|mcg|iu|ml|units?)\b/i;
+const WEEKLY_X_RE = /\bweekly\s*x\s*\d+/i;
+const PRESCRIPTIVE_RE = /\b(?:start at|increase to|take|inject|dose at|titrate to)\b/i;
+const SOCIAL_LINK_RE = /\b(?:https?:\/\/\S*(?:reddit\.com|tiktok\.com|x\.com|twitter\.com|discord\.gg)\S*)\b/i;
 
 const bannedPhrases = [
   'appears in the supplier catalog list',
@@ -88,6 +113,11 @@ const requiredGuideFields = [
   'status',
   'metaDescription',
   'heroSummary',
+  'regulatoryContext',
+  'dosingFramework',
+  'evidenceProfile',
+  'communityReports',
+  'riskScreen',
   'useCases',
   'candidateProfile',
   'avoidanceFlags',
@@ -234,6 +264,134 @@ for (const [index, guide] of guides.entries()) {
     }
   }
 
+  if (!guide.regulatoryContext || typeof guide.regulatoryContext !== 'object') {
+    errors.push(`${label} regulatoryContext must be an object.`);
+  } else {
+    if (!allowedRegulatoryClassifications.has(guide.regulatoryContext.classification)) {
+      errors.push(`${label}.regulatoryContext.classification is invalid: ${guide.regulatoryContext.classification}`);
+    }
+
+    if (typeof guide.regulatoryContext.plainLanguageStatus !== 'string' || guide.regulatoryContext.plainLanguageStatus.trim().length === 0) {
+      errors.push(`${label}.regulatoryContext.plainLanguageStatus must be a non-empty string.`);
+    }
+
+    if (typeof guide.regulatoryContext.legalNotice !== 'string' || guide.regulatoryContext.legalNotice.trim().length < 20) {
+      errors.push(`${label}.regulatoryContext.legalNotice must be a readable sentence.`);
+    }
+  }
+
+  if (!guide.dosingFramework || typeof guide.dosingFramework !== 'object') {
+    errors.push(`${label} dosingFramework must be an object.`);
+  } else {
+    for (const field of ['pacePrinciples', 'holdTriggers', 'resumeCriteria', 'trackingFocus']) {
+      if (!Array.isArray(guide.dosingFramework[field]) || guide.dosingFramework[field].length === 0) {
+        errors.push(`${label}.dosingFramework.${field} must be a non-empty array.`);
+      }
+    }
+
+    if (typeof guide.dosingFramework.uncertaintyStatement !== 'string' || guide.dosingFramework.uncertaintyStatement.trim().length < 20) {
+      errors.push(`${label}.dosingFramework.uncertaintyStatement must be a readable sentence.`);
+    }
+  }
+
+  if (!guide.evidenceProfile || typeof guide.evidenceProfile !== 'object') {
+    errors.push(`${label} evidenceProfile must be an object.`);
+  } else {
+    if (!allowedEvidenceConfidence.has(guide.evidenceProfile.overall)) {
+      errors.push(`${label}.evidenceProfile.overall must be one of ${[...allowedEvidenceConfidence].join(', ')}`);
+    }
+
+    if (!Array.isArray(guide.evidenceProfile.bySection) || guide.evidenceProfile.bySection.length === 0) {
+      errors.push(`${label}.evidenceProfile.bySection must be a non-empty array.`);
+    } else {
+      const presentSectionKeys = new Set();
+      for (const [sectionIndex, entry] of guide.evidenceProfile.bySection.entries()) {
+        const sectionLabel = `${label}.evidenceProfile.bySection[${sectionIndex}]`;
+
+        if (!entry || typeof entry !== 'object') {
+          errors.push(`${sectionLabel} must be an object.`);
+          continue;
+        }
+
+        if (typeof entry.sectionKey !== 'string' || entry.sectionKey.trim() === '') {
+          errors.push(`${sectionLabel}.sectionKey must be a non-empty string.`);
+        } else {
+          presentSectionKeys.add(entry.sectionKey);
+          if (!requiredEvidenceSections.has(entry.sectionKey)) {
+            errors.push(`${sectionLabel}.sectionKey is unsupported: ${entry.sectionKey}`);
+          }
+        }
+
+        if (!allowedEvidenceConfidence.has(entry.confidence)) {
+          errors.push(`${sectionLabel}.confidence must be one of ${[...allowedEvidenceConfidence].join(', ')}`);
+        }
+
+        if (typeof entry.rationale !== 'string' || entry.rationale.trim().length < 12) {
+          errors.push(`${sectionLabel}.rationale must be a readable sentence.`);
+        }
+
+        if (!Array.isArray(entry.citationIds) || entry.citationIds.length === 0) {
+          errors.push(`${sectionLabel}.citationIds must be a non-empty array.`);
+        }
+      }
+
+      for (const requiredKey of requiredEvidenceSections) {
+        if (!presentSectionKeys.has(requiredKey)) {
+          errors.push(`${label}.evidenceProfile.bySection is missing required sectionKey: ${requiredKey}`);
+        }
+      }
+    }
+
+    if (!Array.isArray(guide.evidenceProfile.dataGaps) || guide.evidenceProfile.dataGaps.length === 0) {
+      errors.push(`${label}.evidenceProfile.dataGaps must be a non-empty array.`);
+    }
+  }
+
+  if (!guide.communityReports || typeof guide.communityReports !== 'object') {
+    errors.push(`${label} communityReports must be an object.`);
+  } else {
+    if (typeof guide.communityReports.included !== 'boolean') {
+      errors.push(`${label}.communityReports.included must be boolean.`);
+    }
+
+    if (guide.communityReports.confidence !== 'low') {
+      errors.push(`${label}.communityReports.confidence must be fixed to "low".`);
+    }
+
+    if (!Array.isArray(guide.communityReports.summary)) {
+      errors.push(`${label}.communityReports.summary must be an array.`);
+    } else if (guide.communityReports.included && guide.communityReports.summary.length === 0) {
+      errors.push(`${label}.communityReports.summary must be non-empty when included is true.`);
+    }
+
+    if (guide.communityReports.included
+      && (typeof guide.communityReports.safetyCaution !== 'string' || guide.communityReports.safetyCaution.trim().length < 20)) {
+      errors.push(`${label}.communityReports.safetyCaution must be present when included is true.`);
+    }
+
+    if (guide.communityReports.sourcePolicy !== 'summarized_nonlinked') {
+      errors.push(`${label}.communityReports.sourcePolicy must be "summarized_nonlinked".`);
+    }
+
+    const communityText = [
+      ...(guide.communityReports.summary || []),
+      guide.communityReports.safetyCaution || ''
+    ].join(' ');
+    if (SOCIAL_LINK_RE.test(communityText)) {
+      errors.push(`${label}.communityReports contains direct social/forum links which are disallowed.`);
+    }
+  }
+
+  if (!guide.riskScreen || typeof guide.riskScreen !== 'object') {
+    errors.push(`${label} riskScreen must be an object.`);
+  } else {
+    for (const field of ['whoMayDiscussWithProvider', 'whoShouldAvoidOrPause', 'sideEffectsCommon', 'sideEffectsSerious', 'emergencySignals']) {
+      if (!Array.isArray(guide.riskScreen[field]) || guide.riskScreen[field].length === 0) {
+        errors.push(`${label}.riskScreen.${field} must be a non-empty array.`);
+      }
+    }
+  }
+
   if (!guide.dosingSection || typeof guide.dosingSection !== 'object') {
     errors.push(`${label} dosingSection must be an object.`);
   } else {
@@ -317,6 +475,16 @@ for (const [index, guide] of guides.entries()) {
       }
     }
 
+    const evidenceSections = guide.evidenceProfile?.bySection || [];
+    for (const [sectionIndex, section] of evidenceSections.entries()) {
+      const sectionLabel = `${label}.evidenceProfile.bySection[${sectionIndex}]`;
+      for (const citationId of section.citationIds || []) {
+        if (!citationIds.has(citationId)) {
+          errors.push(`${sectionLabel} references missing citation id: ${citationId}`);
+        }
+      }
+    }
+
     const doseStrings = [
       guide?.dosingSection?.overview || '',
       ...(guide?.dosingSection?.protocolPatterns || []),
@@ -349,6 +517,42 @@ for (const [index, guide] of guides.entries()) {
     }
   }
 
+  if (['low', 'insufficient'].includes(guide.evidenceProfile?.overall)
+    && (!guide.dosingFramework?.uncertaintyStatement || guide.dosingFramework.uncertaintyStatement.trim().length < 20)) {
+    errors.push(`${label} low/insufficient evidence requires a non-empty dosingFramework.uncertaintyStatement.`);
+  }
+
+  if (guide.communityReports?.included
+    && (!guide.communityReports.safetyCaution || guide.communityReports.safetyCaution.trim().length < 20)) {
+    errors.push(`${label} communityReports.included=true requires safetyCaution.`);
+  }
+
+  const legalLintSections = [
+    ...(guide.dosingFramework?.pacePrinciples || []),
+    ...(guide.dosingFramework?.holdTriggers || []),
+    ...(guide.dosingFramework?.resumeCriteria || []),
+    ...(guide.dosingFramework?.trackingFocus || []),
+    guide.dosingFramework?.uncertaintyStatement || '',
+    ...(guide.communityReports?.summary || []),
+    guide.communityReports?.safetyCaution || '',
+    ...(guide.riskScreen?.whoMayDiscussWithProvider || []),
+    ...(guide.riskScreen?.whoShouldAvoidOrPause || []),
+    ...(guide.riskScreen?.sideEffectsCommon || []),
+    ...(guide.riskScreen?.sideEffectsSerious || []),
+    ...(guide.riskScreen?.emergencySignals || [])
+  ];
+
+  for (const [lineIndex, line] of legalLintSections.entries()) {
+    const text = String(line || '');
+    if (DOSAGE_UNIT_RE.test(text) || WEEKLY_X_RE.test(text)) {
+      errors.push(`${label} legal lint line ${lineIndex + 1} contains dosage-unit language.`);
+    }
+
+    if (PRESCRIPTIVE_RE.test(text)) {
+      errors.push(`${label} legal lint line ${lineIndex + 1} contains prescriptive dosing wording.`);
+    }
+  }
+
   const textForLint = [
     guide.displayTitle,
     guide.subtitle,
@@ -358,6 +562,18 @@ for (const [index, guide] of guides.entries()) {
     ...(guide.avoidanceFlags || []),
     ...(guide.sideEffects?.common || []),
     ...(guide.sideEffects?.serious || []),
+    ...(guide.riskScreen?.whoMayDiscussWithProvider || []),
+    ...(guide.riskScreen?.whoShouldAvoidOrPause || []),
+    ...(guide.riskScreen?.sideEffectsCommon || []),
+    ...(guide.riskScreen?.sideEffectsSerious || []),
+    ...(guide.riskScreen?.emergencySignals || []),
+    ...(guide.dosingFramework?.pacePrinciples || []),
+    ...(guide.dosingFramework?.holdTriggers || []),
+    ...(guide.dosingFramework?.resumeCriteria || []),
+    ...(guide.dosingFramework?.trackingFocus || []),
+    guide.dosingFramework?.uncertaintyStatement || '',
+    ...(guide.communityReports?.summary || []),
+    guide.communityReports?.safetyCaution || '',
     guide.dosingSection?.overview,
     ...(guide.dosingSection?.protocolPatterns || []),
     ...(guide.dosingSection?.realWorldPatterns || []),
