@@ -11,6 +11,7 @@ This is the official website for ShotClock (GLP-1 & Peptide Tracker), hosted on 
 - `templates/guide.template.html` - Guide page template
 - `scripts/generate-guides.mjs` - Generates guide pages + sitemap + robots
 - `scripts/validate-guides.mjs` - Schema and citation marker validation
+- `scripts/enrich-guide-depth.mjs` - Backfills richer use/safety/dosing guide fields
 - `scripts/check-links.mjs` - Internal/external link verification
 - `privacy.html` - Privacy Policy
 - `terms.html` - Terms of Service
@@ -23,11 +24,13 @@ This is the official website for ShotClock (GLP-1 & Peptide Tracker), hosted on 
 ## Content Workflow
 
 1. Edit `content/guides.json`.
-2. Validate content:
+2. Optional: refresh depth fields across all guides:
+   - `node scripts/enrich-guide-depth.mjs`
+3. Validate content:
    - `node scripts/validate-guides.mjs`
-3. Regenerate pages and SEO artifacts:
+4. Regenerate pages and SEO artifacts:
    - `node scripts/generate-guides.mjs`
-4. Verify links:
+5. Verify links:
    - `node scripts/check-links.mjs`
 
 ## Setup Instructions

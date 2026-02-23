@@ -11,7 +11,7 @@ const guidesPath = path.join(root, 'content', 'guides.json');
 
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const CITATION_MARKER_RE = /\[(C\d+)\]/g;
+const CITATION_MARKER_RE = /\[(C\d+)\]/;
 
 const allowedStatus = new Set([
   'approved',
@@ -88,6 +88,10 @@ const requiredGuideFields = [
   'status',
   'metaDescription',
   'heroSummary',
+  'useCases',
+  'candidateProfile',
+  'avoidanceFlags',
+  'sideEffects',
   'dosingSection',
   'trackingSignals',
   'safetyFlags',
@@ -245,6 +249,32 @@ for (const [index, guide] of guides.entries()) {
     if (!Array.isArray(ds.monitoringWindows) || ds.monitoringWindows.length === 0) {
       errors.push(`${label} dosingSection.monitoringWindows must be a non-empty array.`);
     }
+
+    if (!Array.isArray(ds.realWorldPatterns) || ds.realWorldPatterns.length === 0) {
+      errors.push(`${label} dosingSection.realWorldPatterns must be a non-empty array.`);
+    }
+
+    if (!Array.isArray(ds.escalationBoundaries) || ds.escalationBoundaries.length === 0) {
+      errors.push(`${label} dosingSection.escalationBoundaries must be a non-empty array.`);
+    }
+  }
+
+  for (const listField of ['useCases', 'candidateProfile', 'avoidanceFlags']) {
+    if (!Array.isArray(guide[listField]) || guide[listField].length === 0) {
+      errors.push(`${label} ${listField} must be a non-empty array.`);
+    }
+  }
+
+  if (!guide.sideEffects || typeof guide.sideEffects !== 'object') {
+    errors.push(`${label} sideEffects must be an object.`);
+  } else {
+    if (!Array.isArray(guide.sideEffects.common) || guide.sideEffects.common.length === 0) {
+      errors.push(`${label} sideEffects.common must be a non-empty array.`);
+    }
+
+    if (!Array.isArray(guide.sideEffects.serious) || guide.sideEffects.serious.length === 0) {
+      errors.push(`${label} sideEffects.serious must be a non-empty array.`);
+    }
   }
 
   for (const listField of ['trackingSignals', 'safetyFlags', 'providerQuestions']) {
@@ -290,7 +320,9 @@ for (const [index, guide] of guides.entries()) {
     const doseStrings = [
       guide?.dosingSection?.overview || '',
       ...(guide?.dosingSection?.protocolPatterns || []),
-      ...(guide?.dosingSection?.monitoringWindows || [])
+      ...(guide?.dosingSection?.realWorldPatterns || []),
+      ...(guide?.dosingSection?.monitoringWindows || []),
+      ...(guide?.dosingSection?.escalationBoundaries || [])
     ];
 
     const cited = new Set();
@@ -300,7 +332,7 @@ for (const [index, guide] of guides.entries()) {
         errors.push(`${label} dosing line ${doseIndex + 1} is missing citation marker [C#].`);
       }
 
-      const matches = line.matchAll(CITATION_MARKER_RE);
+      const matches = line.matchAll(/\[(C\d+)\]/g);
       for (const match of matches) {
         cited.add(match[1]);
       }
@@ -321,9 +353,16 @@ for (const [index, guide] of guides.entries()) {
     guide.displayTitle,
     guide.subtitle,
     guide.heroSummary,
+    ...(guide.useCases || []),
+    ...(guide.candidateProfile || []),
+    ...(guide.avoidanceFlags || []),
+    ...(guide.sideEffects?.common || []),
+    ...(guide.sideEffects?.serious || []),
     guide.dosingSection?.overview,
     ...(guide.dosingSection?.protocolPatterns || []),
-    ...(guide.dosingSection?.monitoringWindows || [])
+    ...(guide.dosingSection?.realWorldPatterns || []),
+    ...(guide.dosingSection?.monitoringWindows || []),
+    ...(guide.dosingSection?.escalationBoundaries || [])
   ].join(' ');
 
   const banned = hasBannedPhrase(textForLint);

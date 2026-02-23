@@ -60,15 +60,59 @@
 
       <div class="guide-layout">
         <section class="guide-section">
+          <h2>What It Is Meant For</h2>
+          <ul>
+            {{USE_CASES_HTML}}
+          </ul>
+        </section>
+
+        <section class="guide-section">
+          <h2>Who Usually Discusses This with a Provider</h2>
+          <ul>
+            {{CANDIDATE_PROFILE_HTML}}
+          </ul>
+          <h3>Who Should Pause or Use Extra Caution</h3>
+          <ul>
+            {{AVOIDANCE_FLAGS_HTML}}
+          </ul>
+        </section>
+
+        <section class="guide-section">
+          <h2>Potential Side Effects</h2>
+          <div class="side-effects-grid">
+            <div>
+              <h3>More common</h3>
+              <ul>
+                {{SIDE_EFFECTS_COMMON_HTML}}
+              </ul>
+            </div>
+            <div>
+              <h3>Serious or urgent</h3>
+              <ul>
+                {{SIDE_EFFECTS_SERIOUS_HTML}}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="guide-section">
           <h2>Dosing and Protocol Context</h2>
           <p>{{DOSING_OVERVIEW}}</p>
           <h3>Common protocol patterns</h3>
           <ul>
             {{PROTOCOL_PATTERNS_HTML}}
           </ul>
+          <h3>Common real-world pacing patterns</h3>
+          <ul>
+            {{REAL_WORLD_PATTERNS_HTML}}
+          </ul>
           <h3>Monitoring windows</h3>
           <ul>
             {{MONITORING_WINDOWS_HTML}}
+          </ul>
+          <h3>Escalation and hold boundaries</h3>
+          <ul>
+            {{ESCALATION_BOUNDARIES_HTML}}
           </ul>
         </section>
 

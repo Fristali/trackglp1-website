@@ -192,9 +192,16 @@ const writeGuidePages = () => {
     page = page.replace(/{{ACRONYM_PANEL_HTML}}/g, acronymPanel(guide));
     page = page.replace(/{{COMPOSITION_PANEL_HTML}}/g, compositionPanel(guide));
     page = page.replace(/{{WARNING_BLOCK}}/g, warningBlock(guide));
+    page = page.replace(/{{USE_CASES_HTML}}/g, toListItems(guide.useCases || []));
+    page = page.replace(/{{CANDIDATE_PROFILE_HTML}}/g, toListItems(guide.candidateProfile || []));
+    page = page.replace(/{{AVOIDANCE_FLAGS_HTML}}/g, toListItems(guide.avoidanceFlags || []));
+    page = page.replace(/{{SIDE_EFFECTS_COMMON_HTML}}/g, toListItems(guide.sideEffects?.common || []));
+    page = page.replace(/{{SIDE_EFFECTS_SERIOUS_HTML}}/g, toListItems(guide.sideEffects?.serious || []));
     page = page.replace(/{{DOSING_OVERVIEW}}/g, formatWithCitations(guide.dosingSection.overview));
     page = page.replace(/{{PROTOCOL_PATTERNS_HTML}}/g, toListItems(guide.dosingSection.protocolPatterns));
+    page = page.replace(/{{REAL_WORLD_PATTERNS_HTML}}/g, toListItems(guide.dosingSection.realWorldPatterns || []));
     page = page.replace(/{{MONITORING_WINDOWS_HTML}}/g, toListItems(guide.dosingSection.monitoringWindows));
+    page = page.replace(/{{ESCALATION_BOUNDARIES_HTML}}/g, toListItems(guide.dosingSection.escalationBoundaries || []));
     page = page.replace(/{{TRACKING_SIGNALS_HTML}}/g, toListItems(guide.trackingSignals));
     page = page.replace(/{{SAFETY_FLAGS_HTML}}/g, toListItems(guide.safetyFlags));
     page = page.replace(/{{PROVIDER_QUESTIONS_HTML}}/g, toListItems(guide.providerQuestions));
